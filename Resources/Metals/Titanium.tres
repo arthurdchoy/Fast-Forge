@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Metal" load_steps=2 format=3 uid="uid://dms4k360fhy0n"]
+
+[ext_resource type="Script" path="res://Scripts/metal.gd" id="1_yglii"]
+
+[resource]
+script = ExtResource("1_yglii")
+metalName = "Titanium"
+metalIngotDensity = 4.506
+metalElement = 2
+metalInitMeltTimeInSeconds = 18
+metalColor = Color(0.47451, 0.47451, 0.509804, 1)
+moltenColor = Color(0, 0, 0, 1)

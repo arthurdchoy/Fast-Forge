@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Metal" load_steps=2 format=3 uid="uid://q4nil5ga8uys"]
+
+[ext_resource type="Script" path="res://Scripts/metal.gd" id="1_fx1xy"]
+
+[resource]
+script = ExtResource("1_fx1xy")
+metalName = "Gold"
+metalIngotDensity = 19.3
+metalElement = 0
+metalInitMeltTimeInSeconds = 10
+metalColor = Color(1, 0.843137, 0, 1)
+moltenColor = Color(0, 0, 0, 1)

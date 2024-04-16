@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Alloy" load_steps=4 format=3 uid="uid://gkmbokkyl574"]
+
+[ext_resource type="Resource" uid="uid://bn25ovtpt65lq" path="res://Resources/Metals/Platnium.tres" id="1_krk7y"]
+[ext_resource type="Script" path="res://Scripts/alloy.gd" id="1_lhnae"]
+[ext_resource type="Resource" uid="uid://q4nil5ga8uys" path="res://Resources/Metals/Gold.tres" id="2_t5b5l"]
+
+[resource]
+script = ExtResource("1_lhnae")
+alloyName = "White Gold"
+alloyElement = 1
+alloyComponent1 = ExtResource("1_krk7y")
+alloyComponent1Amount = 1
+alloyComponent2 = ExtResource("2_t5b5l")
+alloyComponent2Amount = 3
+alloyColor = Color(1, 1, 0.956863, 1)
+differentMoltenColor = false
+moltenColor = Color(0, 0, 0, 1)

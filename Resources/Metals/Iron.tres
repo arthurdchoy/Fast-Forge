@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Metal" load_steps=2 format=3 uid="uid://hsjckw3r7f3x"]
+
+[ext_resource type="Script" path="res://Scripts/metal.gd" id="1_shc77"]
+
+[resource]
+script = ExtResource("1_shc77")
+metalName = "Iron"
+metalIngotDensity = 7.874
+metalElement = 0
+metalInitMeltTimeInSeconds = 16
+metalColor = Color(0.631373, 0.615686, 0.580392, 1)
+moltenColor = Color(0, 0, 0, 1)

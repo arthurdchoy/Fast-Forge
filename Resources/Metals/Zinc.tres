@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Metal" load_steps=2 format=3 uid="uid://vs1iiwof2ghq"]
+
+[ext_resource type="Script" path="res://Scripts/metal.gd" id="1_ck06f"]
+
+[resource]
+script = ExtResource("1_ck06f")
+metalName = "Zinc"
+metalIngotDensity = 7.14
+metalElement = 2
+metalInitMeltTimeInSeconds = 5
+metalColor = Color(0.729412, 0.768627, 0.784314, 1)

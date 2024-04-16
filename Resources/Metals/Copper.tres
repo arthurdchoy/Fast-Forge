@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Metal" load_steps=2 format=3 uid="uid://bgitmby4h505s"]
+
+[ext_resource type="Script" path="res://Scripts/metal.gd" id="1_2mqix"]
+
+[resource]
+script = ExtResource("1_2mqix")
+metalName = "Copper"
+metalIngotDensity = 8.94
+metalElement = 0
+metalInitMeltTimeInSeconds = 10
+metalColor = Color(0.721569, 0.45098, 0.2, 1)
