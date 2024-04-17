@@ -9,6 +9,6 @@ name = "Cobalt"
 ingotDensity = 8.9
 element = 2
 coolingTime = 0
-color = Color(0, 0.278, 0.671, 1)
+color = Color(0, 0.278431, 0.670588, 1)
 differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

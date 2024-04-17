@@ -17,7 +17,7 @@ enum ELEMENT {
 ##Element of the metal or alloy.
 @export var element : ELEMENT
 
-##Base cooling time of the metal or alloy, in seconds.
+##Base cooling time of the metal or alloy, in seconds. In general will be about half the time of heating/mixing.
 @export var coolingTime : int
 
 ##The color that will be put onto the metal or alloy sprite.

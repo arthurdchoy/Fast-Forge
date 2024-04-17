@@ -11,6 +11,7 @@ class_name Alloy
 ##The amount of the second metal needed to mix the alloy.
 @export var alloyComponent2Amount : int
 
+@export var alloyBaseMixTime : int
 ##To be nice to the player, the mix time of an alloy will not increase if multiple ingots of the alloy is being made
 func calculate_mix_time():
 	if alloyComponent1 and alloyComponent2 and alloyComponent1Amount and alloyComponent2Amount:
