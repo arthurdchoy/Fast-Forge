@@ -1,22 +1,17 @@
-extends Resource
+extends Base
 class_name Alloy
 
-enum ELEMENT {FIRE, LIGHT, ICE, PHYSICAL}
-
-##Name of alloy
-@export var alloyName : String
-@export var alloyElement : ELEMENT
-
+##The first metal that makes this alloy.
 @export var alloyComponent1 : Metal
+##The amount of the first metal needed to mix the alloy.
 @export var alloyComponent1Amount : int
 
+##The second metal that makes this alloy.
 @export var alloyComponent2 : Metal
+##The amount of the second metal needed to mix the alloy.
 @export var alloyComponent2Amount : int
 
-@export var alloyColor   : Color
-@export var differentMoltenColor : bool #If checked, specified molten color will be different
-@export var moltenColor  : Color
-
+##To be nice to the player, the mix time of an alloy will not increase if multiple ingots of the alloy is being made
 func calculate_mix_time():
 	if alloyComponent1 and alloyComponent2 and alloyComponent1Amount and alloyComponent2Amount:
 		var totalAmount = alloyComponent1Amount + alloyComponent2Amount

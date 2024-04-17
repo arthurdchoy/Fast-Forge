@@ -6,12 +6,12 @@
 
 [resource]
 script = ExtResource("1_trolo")
-alloyName = "Sky Steel"
-alloyElement = 2
 alloyComponent1 = ExtResource("1_ligoc")
 alloyComponent1Amount = 2
 alloyComponent2 = ExtResource("2_5ihmt")
 alloyComponent2Amount = 1
-alloyColor = Color(0.443137, 0.47451, 0.737255, 1)
+name = "Sky Steel"
+element = 2
+color = Color(0.443137, 0.47451, 0.737255, 1)
 differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

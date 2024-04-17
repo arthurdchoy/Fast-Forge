@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_eds3o")
-metalName = "Silver"
-metalIngotDensity = 10.49
-metalElement = 1
-metalInitMeltTimeInSeconds = 9
-metalColor = Color(0.752941, 0.752941, 0.752941, 1)
+metalBaseMeltTimeInSeconds = 9
+name = "Silver"
+ingotDensity = 10.49
+element = 1
+coolingTime = 0
+color = Color(0.752941, 0.752941, 0.752941, 1)
+differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

@@ -6,12 +6,12 @@
 
 [resource]
 script = ExtResource("1_tl1vl")
-alloyName = "Red Gold"
-alloyElement = 0
 alloyComponent1 = ExtResource("1_ufdme")
 alloyComponent1Amount = 1
 alloyComponent2 = ExtResource("2_m3oth")
 alloyComponent2Amount = 3
-alloyColor = Color(0.921569, 0.329412, 0.0235294, 1)
+name = "Red Gold"
+element = 0
+color = Color(0.921569, 0.329412, 0.0235294, 1)
 differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

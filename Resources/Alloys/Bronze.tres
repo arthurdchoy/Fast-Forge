@@ -6,11 +6,11 @@
 
 [resource]
 script = ExtResource("1_2kas8")
-alloyName = "Bronze"
-alloyElement = 0
 alloyComponent1 = ExtResource("1_4gngj")
 alloyComponent1Amount = 4
 alloyComponent2 = ExtResource("2_0u3l0")
 alloyComponent2Amount = 1
-alloyColor = Color(0.803922, 0.498039, 0.196078, 1)
-coltenColor = Color(0, 0, 0, 1)
+name = "Bronze"
+element = 0
+color = Color(0.803922, 0.498039, 0.196078, 1)
+moltenColor = Color(0, 0, 0, 1)

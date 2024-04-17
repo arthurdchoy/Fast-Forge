@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_1mv40")
-metalName = "Platnium"
-metalIngotDensity = 21.45
-metalElement = 1
-metalInitMeltTimeInSeconds = 20
-metalColor = Color(0.898039, 0.894118, 0.886275, 1)
+metalBaseMeltTimeInSeconds = 20
+name = "Platnium"
+ingotDensity = 21.45
+element = 1
+coolingTime = 0
+color = Color(0.898039, 0.894118, 0.886275, 1)
+differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_2mqix")
-metalName = "Copper"
-metalIngotDensity = 8.94
-metalElement = 0
-metalInitMeltTimeInSeconds = 10
-metalColor = Color(0.721569, 0.45098, 0.2, 1)
+metalBaseMeltTimeInSeconds = 10
+name = "Copper"
+ingotDensity = 8.94
+element = 0
+coolingTime = 0
+color = Color(0.721569, 0.45098, 0.2, 1)
+differentMoltenColor = false
+moltenColor = Color(0, 0, 0, 1)

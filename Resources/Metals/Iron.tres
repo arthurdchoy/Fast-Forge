@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_shc77")
-metalName = "Iron"
-metalIngotDensity = 7.874
-metalElement = 0
-metalInitMeltTimeInSeconds = 16
-metalColor = Color(0.631373, 0.615686, 0.580392, 1)
+metalBaseMeltTimeInSeconds = 16
+name = "Iron"
+ingotDensity = 7.874
+element = 0
+coolingTime = 0
+color = Color(0.631373, 0.615686, 0.580392, 1)
+differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

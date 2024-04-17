@@ -6,12 +6,12 @@
 
 [resource]
 script = ExtResource("1_361cr")
-alloyName = "Mythril"
-alloyElement = 2
 alloyComponent1 = ExtResource("1_yojhi")
 alloyComponent1Amount = 1
 alloyComponent2 = ExtResource("2_e07ej")
 alloyComponent2Amount = 2
-alloyColor = Color(0.34902, 0.760784, 0.788235, 1)
+name = "Mythril"
+element = 2
+color = Color(0.34902, 0.760784, 0.788235, 1)
 differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

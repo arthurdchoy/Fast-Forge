@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_ck06f")
-metalName = "Zinc"
-metalIngotDensity = 7.14
-metalElement = 2
-metalInitMeltTimeInSeconds = 5
-metalColor = Color(0.729412, 0.768627, 0.784314, 1)
+metalBaseMeltTimeInSeconds = 5
+name = "Zinc"
+ingotDensity = 7.14
+element = 2
+coolingTime = 0
+color = Color(0.729412, 0.768627, 0.784314, 1)
+differentMoltenColor = false
+moltenColor = Color(0, 0, 0, 1)

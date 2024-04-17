@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_5gu3w")
-metalName = "Tin"
-metalIngotDensity = 7.3
-metalElement = 2
-metalInitMeltTimeInSeconds = 3
-metalColor = Color(0.564706, 0.529412, 0.513726, 1)
+metalBaseMeltTimeInSeconds = 3
+name = "Tin"
+ingotDensity = 7.3
+element = 2
+coolingTime = 0
+color = Color(0.564706, 0.529412, 0.513726, 1)
+differentMoltenColor = false
+moltenColor = Color(0, 0, 0, 1)

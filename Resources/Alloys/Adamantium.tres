@@ -6,12 +6,14 @@
 
 [resource]
 script = ExtResource("1_35fo0")
-alloyName = "Adamantium"
-alloyElement = 0
 alloyComponent1 = ExtResource("1_1ghqk")
 alloyComponent1Amount = 3
 alloyComponent2 = ExtResource("2_xsiik")
 alloyComponent2Amount = 2
-alloyColor = Color(0.682353, 0.117647, 0.313726, 1)
+name = "Adamantium"
+ingotDensity = 0.0
+element = 0
+coolingTime = 0
+color = Color(0.682, 0.118, 0.314, 1)
 differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)
