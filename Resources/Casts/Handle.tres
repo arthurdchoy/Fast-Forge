@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Cast" load_steps=3 format=3 uid="uid://dpkhf1r6moan6"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/cast.gd" id="1_0fe01"]
+[ext_resource type="Texture2D" uid="uid://ct2x7hnfq5erb" path="res://Assets/Cast Assets/handle cast.png" id="2_jxswo"]
+
+[resource]
+script = ExtResource("1_0fe01")
+castName = "Handle"
+coolingMultiplier = 1.0
+castType = 1
+sprite = ExtResource("2_jxswo")

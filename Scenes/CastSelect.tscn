@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://kaygmt4g1j14"]
+
+[ext_resource type="Script" path="res://Scripts/cast_select.gd" id="1_oel1g"]
+[ext_resource type="Texture2D" uid="uid://10ikliwyyv6h" path="res://Assets/Cast Assets/empty cast.png" id="2_b0jqm"]
+[ext_resource type="Texture2D" uid="uid://d1a25qu46mvf5" path="res://Assets/Cast Assets/select.png" id="3_6cgfp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hw6px"]
+size = Vector2(89, 88)
+
+[node name="CastSelect" type="Area2D" node_paths=PackedStringArray("selectLines", "castSprite")]
+script = ExtResource("1_oel1g")
+selectLines = NodePath("Select")
+castSprite = NodePath("Cast")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_hw6px")
+
+[node name="CastBackground" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_b0jqm")
+
+[node name="Select" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_6cgfp")
+
+[node name="Cast" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.0
+offset_top = 40.0
+offset_right = 632.0
+offset_bottom = 177.0
+grow_horizontal = 2
+scale = Vector2(0.2, 0.2)
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 100
+text = "PLACEHOLDER"
+horizontal_alignment = 1
+
+[connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="." to="." method="_on_mouse_shape_exited"]

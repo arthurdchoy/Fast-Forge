@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bp4j5ipkfwbng"
+path="res://.godot/imported/bloop-1-184019.mp3-a7254a94c81a7f4cd19e0aa68eadd0d8.mp3str"
+
+[deps]
+
+source_file="res://Assets/SOunds and Music/bloop-1-184019.mp3"
+dest_files=["res://.godot/imported/bloop-1-184019.mp3-a7254a94c81a7f4cd19e0aa68eadd0d8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

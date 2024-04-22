@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Alloy" load_steps=4 format=3 uid="uid://cikjrd2kej06d"]
 
 [ext_resource type="Resource" uid="uid://hsjckw3r7f3x" path="res://Resources/Metals/Iron.tres" id="1_ligoc"]
-[ext_resource type="Script" path="res://Scripts/alloy.gd" id="1_trolo"]
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/alloy.gd" id="1_trolo"]
 [ext_resource type="Resource" uid="uid://43ki5565xqgv" path="res://Resources/Metals/Tin.tres" id="2_5ihmt"]
 
 [resource]
@@ -11,7 +11,9 @@ alloyComponent1Amount = 2
 alloyComponent2 = ExtResource("2_5ihmt")
 alloyComponent2Amount = 1
 name = "Sky Steel"
+ingotDensity = 0.0
 element = 2
+coolingTime = 0
 color = Color(0.443137, 0.47451, 0.737255, 1)
 differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

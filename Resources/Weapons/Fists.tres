@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://pjdwtv8r6onn"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon.gd" id="1_qm4mm"]
+[ext_resource type="Texture2D" uid="uid://cl0taa58lxrl7" path="res://Assets/Weapon Assets/fists.png" id="2_cgmyc"]
+
+[resource]
+script = ExtResource("1_qm4mm")
+baseWeaponName = "Fists"
+type = 3
+numBlades = 0
+numHandles = 0
+numCrossguards = 0
+numPlates = 2
+numBricks = 2
+texture = ExtResource("2_cgmyc")

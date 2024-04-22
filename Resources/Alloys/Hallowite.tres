@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Alloy" load_steps=4 format=3 uid="uid://dx8nv6wrhc70e"]
 
-[ext_resource type="Script" path="res://Scripts/alloy.gd" id="1_j8j6j"]
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/alloy.gd" id="1_j8j6j"]
 [ext_resource type="Resource" uid="uid://f3p1r1dr0orj" path="res://Resources/Metals/Silver.tres" id="1_m0hbs"]
 [ext_resource type="Resource" uid="uid://bn25ovtpt65lq" path="res://Resources/Metals/Platnium.tres" id="2_q6w3r"]
 
@@ -11,7 +11,9 @@ alloyComponent1Amount = 3
 alloyComponent2 = ExtResource("2_q6w3r")
 alloyComponent2Amount = 1
 name = "Hallowite"
+ingotDensity = 0.0
 element = 1
+coolingTime = 0
 color = Color(1, 0.968627, 0.839216, 1)
 differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

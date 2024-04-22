@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://cq32lc5duglda"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon.gd" id="1_uj06n"]
+[ext_resource type="Texture2D" uid="uid://bwsjwuv72418c" path="res://Assets/Weapon Assets/dagger.png" id="2_63670"]
+
+[resource]
+script = ExtResource("1_uj06n")
+baseWeaponName = "Dagger"
+type = 2
+numBlades = 1
+numHandles = 1
+numCrossguards = 0
+numPlates = 0
+numBricks = 0
+texture = ExtResource("2_63670")

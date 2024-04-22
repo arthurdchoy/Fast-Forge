@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Alloy" load_steps=4 format=3 uid="uid://dt4nl0kw5p7ou"]
 
-[ext_resource type="Script" path="res://Scripts/alloy.gd" id="1_erahf"]
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/alloy.gd" id="1_erahf"]
 [ext_resource type="Resource" uid="uid://bgitmby4h505s" path="res://Resources/Metals/Copper.tres" id="1_oiw1c"]
 [ext_resource type="Resource" uid="uid://vs1iiwof2ghq" path="res://Resources/Metals/Zinc.tres" id="2_3krm8"]
 
@@ -11,6 +11,9 @@ alloyComponent1Amount = 3
 alloyComponent2 = ExtResource("2_3krm8")
 alloyComponent2Amount = 2
 name = "Brass"
+ingotDensity = 0.0
 element = 0
+coolingTime = 0
 color = Color(0.882353, 0.756863, 0.431373, 1)
 differentMoltenColor = false
+moltenColor = Color(0, 0, 0, 1)

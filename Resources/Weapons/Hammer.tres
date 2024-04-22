@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://c4n7dlennllqa"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon.gd" id="1_nfhqi"]
+[ext_resource type="Texture2D" uid="uid://ttnmm0aa31xj" path="res://Assets/Weapon Assets/hammer.png" id="2_62043"]
+
+[resource]
+script = ExtResource("1_nfhqi")
+baseWeaponName = "Hammer"
+type = 6
+numBlades = 0
+numHandles = 1
+numCrossguards = 0
+numPlates = 0
+numBricks = 1
+texture = ExtResource("2_62043")

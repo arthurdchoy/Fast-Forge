@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmbi3bjr28c8q"]
+
+[ext_resource type="Texture2D" uid="uid://dsh5ri0klt3yv" path="res://Assets/Crucible Assets/ingot.png" id="1_eyflo"]
+[ext_resource type="Script" path="res://Scripts/metal_select.gd" id="1_goffq"]
+[ext_resource type="Texture2D" uid="uid://dh0tinvyddkmw" path="res://Assets/Crucible Assets/ingot select.png" id="2_n1j1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7tre7"]
+size = Vector2(80, 80)
+
+[node name="MetalSelect" type="Area2D" node_paths=PackedStringArray("selectLines")]
+script = ExtResource("1_goffq")
+selectLines = NodePath("Select")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7tre7")
+
+[node name="Bar" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_eyflo")
+
+[node name="Select" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_n1j1t")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.0
+offset_top = 40.0
+offset_right = 632.0
+offset_bottom = 177.0
+grow_horizontal = 2
+scale = Vector2(0.2, 0.2)
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 100
+text = "PLACEHOLDER"
+horizontal_alignment = 1
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="." to="." method="_on_mouse_shape_exited"]

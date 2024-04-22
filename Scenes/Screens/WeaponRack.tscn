@@ -1,0 +1,137 @@
+[gd_scene load_steps=14 format=3 uid="uid://bvbbv8lqd0mm6"]
+
+[ext_resource type="Script" path="res://Scripts/WeaponRackScreen.gd" id="1_21d0x"]
+[ext_resource type="PackedScene" uid="uid://bx43ejhynfg3j" path="res://Scenes/CustomerSelect.tscn" id="2_sex2b"]
+[ext_resource type="Script" path="res://Scripts/OrderList.gd" id="2_twiwe"]
+[ext_resource type="Texture2D" uid="uid://hbanlkkc0hv2" path="res://Assets/Customers/red.png" id="3_i7bx3"]
+[ext_resource type="Script" path="res://Scripts/weapon_desc.gd" id="3_yh6xa"]
+[ext_resource type="Texture2D" uid="uid://o131dxkbuqpf" path="res://Assets/Customers/orange.png" id="4_vlmfd"]
+[ext_resource type="Texture2D" uid="uid://bcnjabu6cbeey" path="res://Assets/Customers/yellow.png" id="5_m5rr7"]
+[ext_resource type="Texture2D" uid="uid://djoru70xqjtfy" path="res://Assets/Customers/green.png" id="6_sh678"]
+[ext_resource type="Texture2D" uid="uid://b87pldn1fqaxp" path="res://Assets/Customers/blue.png" id="7_6ucwf"]
+[ext_resource type="Texture2D" uid="uid://bfd6em2x6gxso" path="res://Assets/Customers/indigo.png" id="8_hji4h"]
+[ext_resource type="Texture2D" uid="uid://kwrl0v1cbc5b" path="res://Assets/Customers/violet.png" id="9_atxxs"]
+[ext_resource type="AudioStream" uid="uid://dysn3bl25ofkn" path="res://Assets/SOunds and Music/analog-appliance-button-15-186961.mp3" id="12_33e12"]
+[ext_resource type="AudioStream" uid="uid://c7yvy0sbb745j" path="res://Assets/SOunds and Music/chipsound-logo-jingle-94719.mp3" id="13_1d1ff"]
+
+[node name="WeaponRack" type="Node2D" node_paths=PackedStringArray("orderList", "weaponRack", "weaponDesc", "selectedCustomerLabel", "fulfillOrderButton", "clickSound")]
+script = ExtResource("1_21d0x")
+orderList = NodePath("HBoxContainer/OrderList/VBoxContainer")
+weaponRack = NodePath("HBoxContainer/WeaponRack/GridContainer")
+weaponDesc = NodePath("HBoxContainer/WeaponDesc/VBoxContainer")
+selectedCustomerLabel = NodePath("HBoxContainer/WeaponDesc/VBoxContainer/Label")
+fulfillOrderButton = NodePath("HBoxContainer/WeaponDesc/VBoxContainer/Button")
+potentialCustomerNames = Array[String](["Glathid Redfoot", "Thitmic Orangekeg", "Kutmean Yellowforge", "Krorsonlim Greenfall", "Godaec Blueborn", "Muznarlig Indigohood", "Darernirlum Violetgut"])
+clickSound = NodePath("ClickSound")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(1000, 500)
+offset_left = 12.0
+offset_top = 88.0
+offset_right = 1012.0
+offset_bottom = 588.0
+
+[node name="OrderList" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(150, 500)
+layout_mode = 2
+color = Color(0, 0, 0, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/OrderList"]
+layout_mode = 2
+offset_left = 15.0
+offset_top = 6.0
+offset_right = 215.0
+offset_bottom = 818.0
+scale = Vector2(0.6, 0.6)
+script = ExtResource("2_twiwe")
+customerLooks = Array[Texture2D]([ExtResource("3_i7bx3"), ExtResource("4_vlmfd"), ExtResource("5_m5rr7"), ExtResource("6_sh678"), ExtResource("7_6ucwf"), ExtResource("8_hji4h"), ExtResource("9_atxxs")])
+
+[node name="CustomerSelect" parent="HBoxContainer/OrderList/VBoxContainer" instance=ExtResource("2_sex2b")]
+layout_mode = 2
+
+[node name="CustomerSelect2" parent="HBoxContainer/OrderList/VBoxContainer" instance=ExtResource("2_sex2b")]
+layout_mode = 2
+
+[node name="CustomerSelect3" parent="HBoxContainer/OrderList/VBoxContainer" instance=ExtResource("2_sex2b")]
+layout_mode = 2
+
+[node name="CustomerSelect4" parent="HBoxContainer/OrderList/VBoxContainer" instance=ExtResource("2_sex2b")]
+layout_mode = 2
+
+[node name="WeaponRack" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+size_flags_horizontal = 8
+color = Color(0, 0, 0, 0.4)
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/WeaponRack"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 1640.0
+offset_bottom = 1640.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+columns = 4
+
+[node name="WeaponDesc" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(342, 500)
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/WeaponDesc" node_paths=PackedStringArray("labels")]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 499.0
+script = ExtResource("3_yh6xa")
+labels = [NodePath("WeaponType"), NodePath("Element"), NodePath("Weight"), NodePath("Components")]
+
+[node name="WeaponType" type="Label" parent="HBoxContainer/WeaponDesc/VBoxContainer"]
+custom_minimum_size = Vector2(340, 23)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Weapon Type: "
+
+[node name="Element" type="Label" parent="HBoxContainer/WeaponDesc/VBoxContainer"]
+custom_minimum_size = Vector2(340, 23)
+layout_mode = 2
+text = "Element: "
+
+[node name="Weight" type="Label" parent="HBoxContainer/WeaponDesc/VBoxContainer"]
+custom_minimum_size = Vector2(340, 23)
+layout_mode = 2
+text = "Weight: "
+
+[node name="Components" type="Label" parent="HBoxContainer/WeaponDesc/VBoxContainer"]
+custom_minimum_size = Vector2(340, 250)
+layout_mode = 2
+text = "Components: 
+
+
+
+"
+
+[node name="Label" type="Label" parent="HBoxContainer/WeaponDesc/VBoxContainer"]
+custom_minimum_size = Vector2(340, 23)
+layout_mode = 2
+text = "Selected: "
+
+[node name="Button" type="Button" parent="HBoxContainer/WeaponDesc/VBoxContainer"]
+custom_minimum_size = Vector2(340, 80)
+layout_mode = 2
+text = "Weapon doesn't meet requirements!"
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_33e12")
+volume_db = -20.0
+
+[node name="OrderFulfilled" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_1d1ff")
+volume_db = -20.0
+
+[connection signal="pressed" from="HBoxContainer/WeaponDesc/VBoxContainer/Button" to="." method="_on_button_pressed"]

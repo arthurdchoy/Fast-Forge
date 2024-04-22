@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Cast" load_steps=3 format=3 uid="uid://ih8tyltu7lg0"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/cast.gd" id="1_s2icm"]
+[ext_resource type="Texture2D" uid="uid://cfsk43cj0xa7n" path="res://Assets/Cast Assets/delete.png" id="2_fryvx"]
+
+[resource]
+script = ExtResource("1_s2icm")
+castName = "Dump Metal"
+coolingMultiplier = 0.0
+castType = 5
+sprite = ExtResource("2_fryvx")

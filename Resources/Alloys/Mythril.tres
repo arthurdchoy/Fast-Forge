@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Alloy" load_steps=4 format=3 uid="uid://d041f0wtrysd"]
 
-[ext_resource type="Script" path="res://Scripts/alloy.gd" id="1_361cr"]
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/alloy.gd" id="1_361cr"]
 [ext_resource type="Resource" uid="uid://f3p1r1dr0orj" path="res://Resources/Metals/Silver.tres" id="1_yojhi"]
 [ext_resource type="Resource" uid="uid://dms4k360fhy0n" path="res://Resources/Metals/Titanium.tres" id="2_e07ej"]
 
@@ -11,7 +11,9 @@ alloyComponent1Amount = 1
 alloyComponent2 = ExtResource("2_e07ej")
 alloyComponent2Amount = 2
 name = "Mythril"
+ingotDensity = 0.0
 element = 2
+coolingTime = 0
 color = Color(0.34902, 0.760784, 0.788235, 1)
 differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

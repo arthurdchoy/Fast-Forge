@@ -1,0 +1,76 @@
+[gd_scene load_steps=23 format=3 uid="uid://dhfww7vleynd2"]
+
+[ext_resource type="Shader" path="res://Scripts/Weapon.gdshader" id="1_8mna5"]
+[ext_resource type="Script" path="res://Scripts/weapon_select.gd" id="1_voff6"]
+[ext_resource type="Resource" uid="uid://lj4875qgtdmk" path="res://Resources/Weapons/Axe.tres" id="2_bwv3t"]
+[ext_resource type="Resource" uid="uid://bxguhydiq5oec" path="res://Resources/Weapons/Cube.tres" id="3_kyp1p"]
+[ext_resource type="Resource" uid="uid://cq32lc5duglda" path="res://Resources/Weapons/Dagger.tres" id="4_dqjxd"]
+[ext_resource type="Resource" uid="uid://pjdwtv8r6onn" path="res://Resources/Weapons/Fists.tres" id="5_yhqcg"]
+[ext_resource type="Resource" uid="uid://d2muww7fmsh7c" path="res://Resources/Weapons/FryingPan.tres" id="6_wxpxj"]
+[ext_resource type="Resource" uid="uid://7hfpcr3nlom8" path="res://Resources/Weapons/Greatsword.tres" id="7_w7xk6"]
+[ext_resource type="Resource" uid="uid://c4n7dlennllqa" path="res://Resources/Weapons/Hammer.tres" id="8_bislo"]
+[ext_resource type="Resource" uid="uid://bsjdxoh5fpewf" path="res://Resources/Weapons/Rapier.tres" id="9_30m12"]
+[ext_resource type="Resource" uid="uid://r5l0bgjqev6m" path="res://Resources/Weapons/Scythe.tres" id="10_pnwgf"]
+[ext_resource type="Resource" uid="uid://bfk0x85jdyuml" path="res://Resources/Weapons/Spade.tres" id="11_5ltay"]
+[ext_resource type="Resource" uid="uid://db7c7isvex50v" path="res://Resources/Weapons/Spear.tres" id="12_xe2du"]
+[ext_resource type="Resource" uid="uid://qkal13e8wg61" path="res://Resources/Weapons/Staff.tres" id="13_vu8xf"]
+[ext_resource type="Resource" uid="uid://ccokwrrop00go" path="res://Resources/Weapons/Sword.tres" id="14_clab3"]
+[ext_resource type="Resource" uid="uid://blju8udymjrq7" path="res://Resources/Weapons/NoWeapon.tres" id="15_4gbsw"]
+[ext_resource type="Texture2D" uid="uid://oc41yjc2xppw" path="res://Assets/Weapon Assets/axe.png" id="17_wbrjq"]
+[ext_resource type="StyleBox" uid="uid://ciwd7dulc3877" path="res://Assets/Styles/PartSelect.tres" id="18_sv575"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eu73h"]
+shader = ExtResource("1_8mna5")
+shader_parameter/origin1 = Color(1, 0.0470588, 0, 1)
+shader_parameter/new1 = Color(1, 0, 0, 1)
+shader_parameter/origin2 = Color(0.054902, 1, 0, 1)
+shader_parameter/new2 = Color(0, 1, 0, 1)
+shader_parameter/origin3 = Color(0, 0.0313726, 1, 1)
+shader_parameter/new3 = Color(0, 0, 1, 1)
+shader_parameter/origin4 = Color(0.952941, 1, 0, 1)
+shader_parameter/new4 = Color(1, 1, 0, 1)
+shader_parameter/defaultColor = null
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s74n4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wg6oa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a1yqm"]
+
+[node name="WeaponSelect" type="Control" node_paths=PackedStringArray("sprite", "button")]
+material = SubResource("ShaderMaterial_eu73h")
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+pivot_offset = Vector2(250, 250)
+script = ExtResource("1_voff6")
+possibleWeapons = Array[Resource("res://Scripts/Resource Scripts/weapon.gd")]([ExtResource("2_bwv3t"), ExtResource("3_kyp1p"), ExtResource("4_dqjxd"), ExtResource("5_yhqcg"), ExtResource("6_wxpxj"), ExtResource("7_w7xk6"), ExtResource("8_bislo"), ExtResource("9_30m12"), ExtResource("10_pnwgf"), ExtResource("11_5ltay"), ExtResource("12_xe2du"), ExtResource("13_vu8xf"), ExtResource("14_clab3")])
+weapon = ExtResource("15_4gbsw")
+sprite = NodePath("WeaponSprite")
+button = NodePath("SelectButton")
+sMaterial = SubResource("ShaderMaterial_eu73h")
+
+[node name="WeaponSprite" type="TextureRect" parent="."]
+use_parent_material = true
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 500.0
+texture = ExtResource("17_wbrjq")
+expand_mode = 3
+
+[node name="SelectButton" type="Button" parent="."]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 500.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s74n4")
+theme_override_styles/hover = ExtResource("18_sv575")
+theme_override_styles/pressed = ExtResource("18_sv575")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wg6oa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a1yqm")
+
+[connection signal="pressed" from="SelectButton" to="." method="_on_select_button_pressed"]

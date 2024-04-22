@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Cast" load_steps=3 format=3 uid="uid://cyvap7l3yfrwr"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/cast.gd" id="1_wohib"]
+[ext_resource type="Texture2D" uid="uid://cmmtnqjhbbuss" path="res://Assets/Cast Assets/blade cast.png" id="2_54hvb"]
+
+[resource]
+script = ExtResource("1_wohib")
+castName = "Blade"
+coolingMultiplier = 1.1
+castType = 0
+sprite = ExtResource("2_54hvb")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://r5l0bgjqev6m"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon.gd" id="1_kmher"]
+[ext_resource type="Texture2D" uid="uid://dciefplgxsn1v" path="res://Assets/Weapon Assets/scythe.png" id="2_ka7b1"]
+
+[resource]
+script = ExtResource("1_kmher")
+baseWeaponName = "Scythe"
+type = 8
+numBlades = 2
+numHandles = 1
+numCrossguards = 0
+numPlates = 1
+numBricks = 0
+texture = ExtResource("2_ka7b1")

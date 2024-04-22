@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://db7c7isvex50v"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon.gd" id="1_3t6kg"]
+[ext_resource type="Texture2D" uid="uid://ddk4tjbgkxo5" path="res://Assets/Weapon Assets/spear.png" id="2_74n86"]
+
+[resource]
+script = ExtResource("1_3t6kg")
+baseWeaponName = "Spear"
+type = 10
+numBlades = 1
+numHandles = 2
+numCrossguards = 0
+numPlates = 0
+numBricks = 0
+texture = ExtResource("2_74n86")

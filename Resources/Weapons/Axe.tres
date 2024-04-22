@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://lj4875qgtdmk"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon.gd" id="1_4ldfi"]
+[ext_resource type="Texture2D" uid="uid://oc41yjc2xppw" path="res://Assets/Weapon Assets/axe.png" id="2_butpt"]
+
+[resource]
+script = ExtResource("1_4ldfi")
+baseWeaponName = "Axe"
+numBlades = 1
+numHandles = 1
+numCrossguards = 0
+numPlates = 1
+numBricks = 0
+texture = ExtResource("2_butpt")

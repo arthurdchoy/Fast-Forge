@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://7hfpcr3nlom8"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon.gd" id="1_1it46"]
+[ext_resource type="Texture2D" uid="uid://dcnklqhd1q34a" path="res://Assets/Weapon Assets/greatsword.png" id="2_2i527"]
+
+[resource]
+script = ExtResource("1_1it46")
+baseWeaponName = "Greatsword"
+type = 5
+numBlades = 2
+numHandles = 1
+numCrossguards = 1
+numPlates = 0
+numBricks = 0
+texture = ExtResource("2_2i527")

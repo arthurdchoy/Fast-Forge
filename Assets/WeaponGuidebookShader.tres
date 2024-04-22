@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bmnm4ll8fl7t"]
+
+[ext_resource type="Shader" path="res://Scripts/Weapon.gdshader" id="1_27a6c"]
+
+[resource]
+shader = ExtResource("1_27a6c")
+shader_parameter/origin1 = Color(1, 0.0470588, 0, 1)
+shader_parameter/new1 = Color(1, 1, 1, 1)
+shader_parameter/origin2 = Color(0.054902, 1, 0, 1)
+shader_parameter/new2 = Color(1, 1, 1, 1)
+shader_parameter/origin3 = Color(0, 0.0313726, 1, 1)
+shader_parameter/new3 = Color(1, 1, 1, 1)
+shader_parameter/origin4 = Color(0.952941, 1, 0, 1)
+shader_parameter/new4 = Color(1, 1, 1, 1)
+shader_parameter/defaultColor = null

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Order" load_steps=24 format=3 uid="uid://1vyrm4xq81ft"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/order.gd" id="1_4h4c2"]
+[ext_resource type="Resource" uid="uid://csjmr8w0uhxb8" path="res://Resources/Metals/Cobalt.tres" id="1_t0nr5"]
+[ext_resource type="Resource" uid="uid://bgitmby4h505s" path="res://Resources/Metals/Copper.tres" id="2_uu0q8"]
+[ext_resource type="Resource" uid="uid://q4nil5ga8uys" path="res://Resources/Metals/Gold.tres" id="3_ayvqc"]
+[ext_resource type="Resource" uid="uid://hsjckw3r7f3x" path="res://Resources/Metals/Iron.tres" id="4_4un41"]
+[ext_resource type="Resource" uid="uid://cwwl32qgv8df8" path="res://Resources/Metals/Nickel.tres" id="5_06554"]
+[ext_resource type="Resource" uid="uid://bn25ovtpt65lq" path="res://Resources/Metals/Platnium.tres" id="6_rsha4"]
+[ext_resource type="Resource" uid="uid://f3p1r1dr0orj" path="res://Resources/Metals/Silver.tres" id="7_jq00n"]
+[ext_resource type="Resource" uid="uid://43ki5565xqgv" path="res://Resources/Metals/Tin.tres" id="8_ujrn4"]
+[ext_resource type="Resource" uid="uid://dms4k360fhy0n" path="res://Resources/Metals/Titanium.tres" id="9_qv04i"]
+[ext_resource type="Resource" uid="uid://vs1iiwof2ghq" path="res://Resources/Metals/Zinc.tres" id="10_3q4ad"]
+[ext_resource type="Resource" uid="uid://cmad5rdfkxtne" path="res://Resources/Alloys/Adamantium.tres" id="11_6nsvr"]
+[ext_resource type="Resource" uid="uid://btsjx700t0pi2" path="res://Resources/Alloys/Argentium.tres" id="12_ppcay"]
+[ext_resource type="Resource" uid="uid://dkiuw238qe5nr" path="res://Resources/Alloys/Blue Gold.tres" id="13_hked4"]
+[ext_resource type="Resource" uid="uid://dt4nl0kw5p7ou" path="res://Resources/Alloys/Brass.tres" id="14_dyoc0"]
+[ext_resource type="Resource" uid="uid://dsdxpdq36ca0r" path="res://Resources/Alloys/Bronze.tres" id="15_wwj8a"]
+[ext_resource type="Resource" uid="uid://b00mlrc6vgo0v" path="res://Resources/Alloys/Electrum.tres" id="16_15216"]
+[ext_resource type="Resource" uid="uid://dx8nv6wrhc70e" path="res://Resources/Alloys/Hallowite.tres" id="17_uhwbc"]
+[ext_resource type="Resource" uid="uid://ce0vrpc5t6jon" path="res://Resources/Alloys/Hard Steel.tres" id="18_bbh35"]
+[ext_resource type="Resource" uid="uid://d041f0wtrysd" path="res://Resources/Alloys/Mythril.tres" id="19_wk72a"]
+[ext_resource type="Resource" uid="uid://ccv64d7tfpxam" path="res://Resources/Alloys/Red Gold.tres" id="20_gc728"]
+[ext_resource type="Resource" uid="uid://cikjrd2kej06d" path="res://Resources/Alloys/Sky Steel.tres" id="21_jjgch"]
+[ext_resource type="Resource" uid="uid://gkmbokkyl574" path="res://Resources/Alloys/White Gold.tres" id="22_e80k8"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_4h4c2")
+possibleMaterials = Array[Resource("res://Scripts/Resource Scripts/metalOrAlloy.gd")]([ExtResource("1_t0nr5"), ExtResource("2_uu0q8"), ExtResource("3_ayvqc"), ExtResource("4_4un41"), ExtResource("5_06554"), ExtResource("6_rsha4"), ExtResource("7_jq00n"), ExtResource("8_ujrn4"), ExtResource("9_qv04i"), ExtResource("10_3q4ad"), ExtResource("11_6nsvr"), ExtResource("12_ppcay"), ExtResource("13_hked4"), ExtResource("14_dyoc0"), ExtResource("15_wwj8a"), ExtResource("16_15216"), ExtResource("17_uhwbc"), ExtResource("18_bbh35"), ExtResource("19_wk72a"), ExtResource("20_gc728"), ExtResource("21_jjgch"), ExtResource("22_e80k8")])

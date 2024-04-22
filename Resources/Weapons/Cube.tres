@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://bxguhydiq5oec"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon.gd" id="1_fsaal"]
+[ext_resource type="Texture2D" uid="uid://c4qw4lgp5shru" path="res://Assets/Weapon Assets/cube.png" id="2_d7i7b"]
+
+[resource]
+script = ExtResource("1_fsaal")
+baseWeaponName = "Cube"
+type = 1
+numBlades = 0
+numHandles = 0
+numCrossguards = 0
+numPlates = 0
+numBricks = 4
+texture = ExtResource("2_d7i7b")
