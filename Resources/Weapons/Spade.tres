@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://bfk0x85jdyuml"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon.gd" id="1_xet02"]
+[ext_resource type="Texture2D" uid="uid://dengvmiqx6waa" path="res://Assets/Weapon Assets/spade.png" id="2_t0rt0"]
+
+[resource]
+script = ExtResource("1_xet02")
+baseWeaponName = "Spade"
+type = 9
+numBlades = 0
+numHandles = 2
+numCrossguards = 0
+numPlates = 1
+numBricks = 0
+texture = ExtResource("2_t0rt0")

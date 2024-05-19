@@ -1,0 +1,1049 @@
+[gd_scene load_steps=23 format=3 uid="uid://kdb15mjq7h4v"]
+
+[ext_resource type="Script" path="res://Scripts/Guidebook.gd" id="1_5887k"]
+[ext_resource type="Texture2D" uid="uid://brdf1aw5ex2uu" path="res://Assets/guidebook.png" id="1_fiqiq"]
+[ext_resource type="Texture2D" uid="uid://dsh5ri0klt3yv" path="res://Assets/Crucible Assets/ingot.png" id="2_4vtsr"]
+[ext_resource type="Texture2D" uid="uid://cpl6ejf0joene" path="res://Assets/Part Assets/blade part.png" id="3_ajqh6"]
+[ext_resource type="Texture2D" uid="uid://75brkbqojtik" path="res://Assets/Part Assets/handle part.png" id="4_wsqjv"]
+[ext_resource type="Texture2D" uid="uid://bcg5snfextwlv" path="res://Assets/Part Assets/crossguard part.png" id="5_qypbg"]
+[ext_resource type="Texture2D" uid="uid://cfwm6fnvlswfw" path="res://Assets/Part Assets/plate part.png" id="6_t2i85"]
+[ext_resource type="Texture2D" uid="uid://dhmtfflx4icx6" path="res://Assets/Part Assets/brick part.png" id="7_ffuxo"]
+[ext_resource type="Texture2D" uid="uid://oc41yjc2xppw" path="res://Assets/Weapon Assets/axe.png" id="8_b53su"]
+[ext_resource type="Material" uid="uid://bmnm4ll8fl7t" path="res://Assets/WeaponGuidebookShader.tres" id="8_bjble"]
+[ext_resource type="Texture2D" uid="uid://c4qw4lgp5shru" path="res://Assets/Weapon Assets/cube.png" id="10_yjo6r"]
+[ext_resource type="Texture2D" uid="uid://bwsjwuv72418c" path="res://Assets/Weapon Assets/dagger.png" id="11_d427w"]
+[ext_resource type="Texture2D" uid="uid://cl0taa58lxrl7" path="res://Assets/Weapon Assets/fists.png" id="12_3ue71"]
+[ext_resource type="Texture2D" uid="uid://cu04754j5yfr1" path="res://Assets/Weapon Assets/frying pan.png" id="13_fs0bi"]
+[ext_resource type="Texture2D" uid="uid://dcnklqhd1q34a" path="res://Assets/Weapon Assets/greatsword.png" id="14_n2wpx"]
+[ext_resource type="Texture2D" uid="uid://ttnmm0aa31xj" path="res://Assets/Weapon Assets/hammer.png" id="15_ysnb0"]
+[ext_resource type="Texture2D" uid="uid://dq2rokiitbybi" path="res://Assets/Weapon Assets/rapier.png" id="16_slyu7"]
+[ext_resource type="Texture2D" uid="uid://dciefplgxsn1v" path="res://Assets/Weapon Assets/scythe.png" id="17_ykdsx"]
+[ext_resource type="Texture2D" uid="uid://dengvmiqx6waa" path="res://Assets/Weapon Assets/spade.png" id="18_ky80d"]
+[ext_resource type="Texture2D" uid="uid://ddk4tjbgkxo5" path="res://Assets/Weapon Assets/spear.png" id="19_v4rgn"]
+[ext_resource type="Texture2D" uid="uid://bus740akk4rea" path="res://Assets/Weapon Assets/staff.png" id="20_pfcxp"]
+[ext_resource type="Texture2D" uid="uid://dpt02bpr13q48" path="res://Assets/Weapon Assets/sword.png" id="21_64a5a"]
+
+[node name="Guidebook" type="Node2D"]
+script = ExtResource("1_5887k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(512, 300)
+texture = ExtResource("1_fiqiq")
+
+[node name="Pages" type="Node2D" parent="."]
+
+[node name="Page1" type="Node2D" parent="Pages"]
+
+[node name="Label" type="Label" parent="Pages/Page1"]
+offset_left = 163.0
+offset_top = 189.0
+offset_right = 481.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "All about metals"
+
+[node name="Label2" type="Label" parent="Pages/Page1"]
+offset_left = 194.0
+offset_top = 241.0
+offset_right = 433.0
+offset_bottom = 424.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Click a metal in the
+bottom bar then click
+a crucible (top row) to
+start melting!"
+
+[node name="Page2" type="Node2D" parent="Pages"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page2"]
+modulate = Color(0, 0.278431, 0.670588, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page2"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Cobalt:
+15 seconds to melt
+8.9 ingot  density
+Ice"
+
+[node name="Page3" type="Node2D" parent="Pages"]
+position = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page3"]
+modulate = Color(0.721569, 0.45098, 0.2, 1)
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page3"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Copper:
+10 seconds to melt
+8.94 ingot density
+Fire"
+
+[node name="Page4" type="Node2D" parent="Pages"]
+position = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page4"]
+modulate = Color(1, 0.843137, 0, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page4"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Gold:
+10 seconds to melt
+19.3 ingot density
+Fire"
+
+[node name="Page5" type="Node2D" parent="Pages"]
+position = Vector2(2048, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page5"]
+modulate = Color(0.631373, 0.615686, 0.580392, 1)
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page5"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Iron:
+16 seconds to melt
+7.874 ingot density
+Fire"
+
+[node name="Page6" type="Node2D" parent="Pages"]
+position = Vector2(2048, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page6"]
+modulate = Color(0.447059, 0.454902, 0.447059, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page6"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Nickel:
+15 seconds to melt
+8.9 ingot density
+Light"
+
+[node name="Page7" type="Node2D" parent="Pages"]
+position = Vector2(3072, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page7"]
+modulate = Color(0.898039, 0.894118, 0.886275, 1)
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page7"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Platinum:
+20 seconds to melt
+21.45 ingot density
+Light"
+
+[node name="Page8" type="Node2D" parent="Pages"]
+position = Vector2(3072, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page8"]
+modulate = Color(0.752941, 0.752941, 0.752941, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page8"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Silver:
+9 seconds to melt
+10.49 ingot density
+Light"
+
+[node name="Page9" type="Node2D" parent="Pages"]
+position = Vector2(4096, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page9"]
+modulate = Color(0.564706, 0.529412, 0.513726, 1)
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page9"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Tin:
+3 seconds to melt
+7.3 ingot density
+Ice"
+
+[node name="Page10" type="Node2D" parent="Pages"]
+position = Vector2(4096, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page10"]
+modulate = Color(0.47451, 0.47451, 0.509804, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page10"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Titanium:
+18 seconds to melt
+4.506 ingot density
+Ice"
+
+[node name="Page11" type="Node2D" parent="Pages"]
+position = Vector2(5120, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page11"]
+modulate = Color(0.729412, 0.768627, 0.784314, 1)
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page11"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Zinc:
+5 seconds to melt
+7.14 ingot density
+Ice
+"
+
+[node name="Page12" type="Node2D" parent="Pages"]
+visible = false
+position = Vector2(5120, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page12"]
+modulate = Color(1, 0.843137, 0, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page12"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Gold:
+10 seconds to melt
+19.3 ingot density
+Fire"
+
+[node name="Page13" type="Node2D" parent="Pages"]
+position = Vector2(6144, 0)
+
+[node name="Label" type="Label" parent="Pages/Page13"]
+offset_left = 163.0
+offset_top = 189.0
+offset_right = 481.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "All about alloys"
+
+[node name="Label2" type="Label" parent="Pages/Page13"]
+offset_left = 194.0
+offset_top = 241.0
+offset_right = 433.0
+offset_bottom = 424.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Click an alloy basin to
+start mixing an alloy!
+
+Both crucibles above the
+basin must have their
+metal melted to do so"
+
+[node name="Page14" type="Node2D" parent="Pages"]
+position = Vector2(6144, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page14"]
+modulate = Color(0.682353, 0.117647, 0.313726, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page14"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Adamantium:
+Made of Cobalt
+and Titanium
+
+Fire"
+
+[node name="Page15" type="Node2D" parent="Pages"]
+position = Vector2(7168, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page15"]
+modulate = Color(0.890196, 0.752941, 0.752941, 1)
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page15"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Argentium:
+Made of Silver
+and Copper
+
+Ice"
+
+[node name="Page16" type="Node2D" parent="Pages"]
+position = Vector2(7168, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page16"]
+modulate = Color(0.839216, 0.823529, 0.580392, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page16"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Blue Gold:
+Made of Iron
+and Gold
+
+Ice"
+
+[node name="Page17" type="Node2D" parent="Pages"]
+position = Vector2(8192, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page17"]
+modulate = Color(0.882353, 0.756863, 0.431373, 1)
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page17"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Brass:
+Made of Copper
+and Zinc
+
+Fire"
+
+[node name="Page18" type="Node2D" parent="Pages"]
+position = Vector2(8192, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page18"]
+modulate = Color(0.803922, 0.498039, 0.196078, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page18"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Bronze:
+Made of Copper
+and Tin
+
+Fire"
+
+[node name="Page19" type="Node2D" parent="Pages"]
+position = Vector2(9216, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page19"]
+modulate = Color(0.905882, 0.776471, 0.592157, 1)
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page19"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Electrum:
+Made of Silver
+and Gold
+
+Light"
+
+[node name="Page20" type="Node2D" parent="Pages"]
+position = Vector2(9216, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page20"]
+modulate = Color(1, 0.968627, 0.839216, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page20"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Hallowite:
+Made of Silver
+and Platinum
+
+Light"
+
+[node name="Page21" type="Node2D" parent="Pages"]
+position = Vector2(10240, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page21"]
+modulate = Color(0.443137, 0.47451, 0.494118, 1)
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page21"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Hard Steel:
+Made of Iron
+and Nickel
+
+Ice"
+
+[node name="Page22" type="Node2D" parent="Pages"]
+position = Vector2(10240, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page22"]
+modulate = Color(0.34902, 0.760784, 0.788235, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page22"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Mythril:
+Made of Silver
+and Titanium
+
+Ice"
+
+[node name="Page23" type="Node2D" parent="Pages"]
+position = Vector2(11264, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page23"]
+modulate = Color(0.921569, 0.329412, 0.0235294, 1)
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page23"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Red Gold:
+Made of Copper
+and Gold
+
+Fire"
+
+[node name="Page24" type="Node2D" parent="Pages"]
+position = Vector2(11264, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page24"]
+modulate = Color(0.443137, 0.47451, 0.737255, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page24"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Sky Steel:
+Made of Iron
+and TIn
+
+Ice"
+
+[node name="Page25" type="Node2D" parent="Pages"]
+position = Vector2(12288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page25"]
+modulate = Color(1, 1, 0.956863, 1)
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page25"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "White Gold:
+Made of Platinum
+and Gold
+
+Light"
+
+[node name="Page26" type="Node2D" parent="Pages"]
+visible = false
+position = Vector2(12288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page26"]
+modulate = Color(0.443137, 0.47451, 0.737255, 1)
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4vtsr")
+
+[node name="Label" type="Label" parent="Pages/Page26"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Sky Steel:
+Made of Iron
+and TIn
+
+Ice"
+
+[node name="Page27" type="Node2D" parent="Pages"]
+position = Vector2(13312, 0)
+
+[node name="Label" type="Label" parent="Pages/Page27"]
+offset_left = 163.0
+offset_top = 189.0
+offset_right = 481.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "All about parts"
+
+[node name="Label2" type="Label" parent="Pages/Page27"]
+offset_left = 194.0
+offset_top = 241.0
+offset_right = 433.0
+offset_bottom = 424.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Click a cast then click
+a crucible or basin
+that has finished melting
+or mixing to cast a part!
+(or dump the metal)"
+
+[node name="Page28" type="Node2D" parent="Pages"]
+position = Vector2(13312, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page28"]
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ajqh6")
+
+[node name="Label" type="Label" parent="Pages/Page28"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Blade:
+Cooling multiplier: 1.1x
+Density multiplier: 1x"
+
+[node name="Page29" type="Node2D" parent="Pages"]
+position = Vector2(14336, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page29"]
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_wsqjv")
+
+[node name="Label" type="Label" parent="Pages/Page29"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Handle:
+Cooling mult: 1x
+Density mult: 0.75x"
+
+[node name="Page30" type="Node2D" parent="Pages"]
+position = Vector2(14336, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page30"]
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_qypbg")
+
+[node name="Label" type="Label" parent="Pages/Page30"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Crossguard:
+Cooling mult: 0.8x
+Density mult: 0.5x"
+
+[node name="Page31" type="Node2D" parent="Pages"]
+position = Vector2(15360, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page31"]
+position = Vector2(334, 166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_t2i85")
+
+[node name="Label" type="Label" parent="Pages/Page31"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Plate (hehe, get it?):
+Cooling mult: 1.4x
+Density mult: 2x"
+
+[node name="Page32" type="Node2D" parent="Pages"]
+position = Vector2(15360, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page32"]
+position = Vector2(677, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ffuxo")
+
+[node name="Label" type="Label" parent="Pages/Page32"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Brick:
+Cooling mult: 1.75x
+Density mult: 3x"
+
+[node name="Page33" type="Node2D" parent="Pages"]
+position = Vector2(16384, 0)
+
+[node name="Label" type="Label" parent="Pages/Page33"]
+offset_left = 163.0
+offset_top = 189.0
+offset_right = 481.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "All about weapons"
+
+[node name="Label2" type="Label" parent="Pages/Page33"]
+offset_left = 194.0
+offset_top = 241.0
+offset_right = 433.0
+offset_bottom = 424.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "A weapon's gets an
+element if a majority
+of its parts have an
+element
+
+Otherwise, it's physical"
+
+[node name="Page34" type="Node2D" parent="Pages"]
+position = Vector2(16384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page34"]
+material = ExtResource("8_bjble")
+position = Vector2(677, 136)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_b53su")
+
+[node name="Label" type="Label" parent="Pages/Page34"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Axe
+Made of:
+-1 Blade
+-1 Plate
+-1 Handle"
+
+[node name="Page35" type="Node2D" parent="Pages"]
+position = Vector2(17408, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page35"]
+material = ExtResource("8_bjble")
+position = Vector2(334, 166)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_yjo6r")
+
+[node name="Label" type="Label" parent="Pages/Page35"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Cube
+Made of:
+-4 bricks (wow)"
+
+[node name="Page36" type="Node2D" parent="Pages"]
+position = Vector2(17408, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page36"]
+material = ExtResource("8_bjble")
+position = Vector2(677, 136)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("11_d427w")
+
+[node name="Label" type="Label" parent="Pages/Page36"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Dagger:
+Made of:
+-1 blade
+-1 handle"
+
+[node name="Page37" type="Node2D" parent="Pages"]
+position = Vector2(18432, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page37"]
+material = ExtResource("8_bjble")
+position = Vector2(334, 166)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("12_3ue71")
+
+[node name="Label" type="Label" parent="Pages/Page37"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Fists
+Made of:
+-2 bricks
+-2 plates"
+
+[node name="Page38" type="Node2D" parent="Pages"]
+position = Vector2(18432, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page38"]
+material = ExtResource("8_bjble")
+position = Vector2(677, 136)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_fs0bi")
+
+[node name="Label" type="Label" parent="Pages/Page38"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Frying Pan
+Made of:
+-2 plates
+-1 handle"
+
+[node name="Page39" type="Node2D" parent="Pages"]
+position = Vector2(19456, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page39"]
+material = ExtResource("8_bjble")
+position = Vector2(334, 166)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("14_n2wpx")
+
+[node name="Label" type="Label" parent="Pages/Page39"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Greatsword
+Made of:
+-2 blades
+-1 crossguard
+-1 handle"
+
+[node name="Page40" type="Node2D" parent="Pages"]
+position = Vector2(19456, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page40"]
+material = ExtResource("8_bjble")
+position = Vector2(677, 136)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("15_ysnb0")
+
+[node name="Label" type="Label" parent="Pages/Page40"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Hammer
+Made of:
+-1 brick
+-1 handle"
+
+[node name="Page41" type="Node2D" parent="Pages"]
+position = Vector2(20480, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page41"]
+material = ExtResource("8_bjble")
+position = Vector2(334, 166)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("16_slyu7")
+
+[node name="Label" type="Label" parent="Pages/Page41"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Rapier
+Made of:
+-1 blade
+-2 crossguards
+-1 handle"
+
+[node name="Page42" type="Node2D" parent="Pages"]
+position = Vector2(20480, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page42"]
+material = ExtResource("8_bjble")
+position = Vector2(677, 136)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_ykdsx")
+
+[node name="Label" type="Label" parent="Pages/Page42"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Scythe
+Made of:
+-2 blades
+-1 plate
+-1 handle"
+
+[node name="Page43" type="Node2D" parent="Pages"]
+position = Vector2(21504, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page43"]
+material = ExtResource("8_bjble")
+position = Vector2(334, 166)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("18_ky80d")
+
+[node name="Label" type="Label" parent="Pages/Page43"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Spade:
+Made of:
+-1 plate
+-2 handles"
+
+[node name="Page44" type="Node2D" parent="Pages"]
+position = Vector2(21504, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page44"]
+material = ExtResource("8_bjble")
+position = Vector2(677, 136)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("19_v4rgn")
+
+[node name="Label" type="Label" parent="Pages/Page44"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Spear
+Made of:
+-1 blade
+-2 handles"
+
+[node name="Page45" type="Node2D" parent="Pages"]
+position = Vector2(22528, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page45"]
+material = ExtResource("8_bjble")
+position = Vector2(334, 166)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("20_pfcxp")
+
+[node name="Label" type="Label" parent="Pages/Page45"]
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 466.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Staff
+Made of:
+-3 handles"
+
+[node name="Page46" type="Node2D" parent="Pages"]
+position = Vector2(22528, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pages/Page46"]
+material = ExtResource("8_bjble")
+position = Vector2(677, 136)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("21_64a5a")
+
+[node name="Label" type="Label" parent="Pages/Page46"]
+offset_left = 539.0
+offset_top = 206.0
+offset_right = 640.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Sword
+Made of:
+-1 blade
+-1 crossguard
+-1 handle"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 65.0
+offset_right = 331.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "the game isnt paused btw ;)"
+
+[node name="LeftButton" type="Button" parent="."]
+offset_left = 150.0
+offset_top = 127.0
+offset_right = 266.0
+offset_bottom = 177.0
+text = "Go Left"
+
+[node name="RightButton" type="Button" parent="."]
+offset_left = 765.0
+offset_top = 83.0
+offset_right = 881.0
+offset_bottom = 133.0
+text = "Go Right"
+
+[connection signal="pressed" from="LeftButton" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="RightButton" to="." method="_on_right_button_pressed"]

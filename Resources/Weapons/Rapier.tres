@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://bsjdxoh5fpewf"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon.gd" id="1_1igy1"]
+[ext_resource type="Texture2D" uid="uid://dq2rokiitbybi" path="res://Assets/Weapon Assets/rapier.png" id="2_2q6tc"]
+
+[resource]
+script = ExtResource("1_1igy1")
+baseWeaponName = "Rapier"
+type = 7
+numBlades = 1
+numHandles = 1
+numCrossguards = 2
+numPlates = 0
+numBricks = 0
+texture = ExtResource("2_2q6tc")

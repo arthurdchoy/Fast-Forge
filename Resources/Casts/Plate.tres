@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Cast" load_steps=3 format=3 uid="uid://chijfxhrc36lc"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/cast.gd" id="1_13odr"]
+[ext_resource type="Texture2D" uid="uid://cclkfsi6ihdsu" path="res://Assets/Cast Assets/plate cast.png" id="2_xmrjr"]
+
+[resource]
+script = ExtResource("1_13odr")
+castName = "Plate"
+coolingMultiplier = 1.4
+castType = 3
+sprite = ExtResource("2_xmrjr")

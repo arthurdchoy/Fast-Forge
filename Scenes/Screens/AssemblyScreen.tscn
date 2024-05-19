@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcqv2clqq3fkj"]
+
+[ext_resource type="Script" path="res://Scripts/AssemblyScreen.gd" id="1_f4khc"]
+[ext_resource type="AudioStream" uid="uid://dysn3bl25ofkn" path="res://Assets/SOunds and Music/analog-appliance-button-15-186961.mp3" id="3_fn0d8"]
+[ext_resource type="PackedScene" uid="uid://dhfww7vleynd2" path="res://Scenes/WeaponSelect.tscn" id="3_vpj8u"]
+
+[node name="AssemblyScreen" type="Node2D" node_paths=PackedStringArray("weaponView", "warningLabel", "weaponDescLabels", "clickSound")]
+script = ExtResource("1_f4khc")
+weaponView = NodePath("WeaponSelect")
+warningLabel = NodePath("Warning")
+weaponDescLabels = [NodePath("WeaponDesc/VBoxContainer/WeaponType"), NodePath("WeaponDesc/VBoxContainer/Element"), NodePath("WeaponDesc/VBoxContainer/Weight"), NodePath("WeaponDesc/VBoxContainer/Components")]
+clickSound = NodePath("ClickSound")
+
+[node name="PartsList" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(128, 500)
+offset_top = 100.0
+offset_right = 136.0
+offset_bottom = 600.0
+horizontal_scroll_mode = 0
+
+[node name="PartsContainer" type="VBoxContainer" parent="PartsList"]
+custom_minimum_size = Vector2(80, 500)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="SelectedParts" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(332, 67)
+offset_left = 140.0
+offset_top = 100.0
+offset_right = 472.0
+offset_bottom = 167.0
+scale = Vector2(1.5, 1.5)
+columns = 4
+
+[node name="WeaponSelect" parent="." instance=ExtResource("3_vpj8u")]
+offset_left = 150.0
+offset_top = 150.0
+offset_right = 650.0
+offset_bottom = 650.0
+scale = Vector2(0.8, 0.8)
+
+[node name="Warning" type="Label" parent="."]
+offset_left = 237.0
+offset_top = 388.0
+offset_right = 563.0
+offset_bottom = 411.0
+text = "Current parts do not make a valid weapon!"
+
+[node name="WeaponDesc" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(340, 500)
+offset_left = 674.0
+offset_top = 91.0
+offset_right = 1014.0
+offset_bottom = 591.0
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WeaponDesc"]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 499.0
+
+[node name="WeaponType" type="Label" parent="WeaponDesc/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Weapon Type: "
+
+[node name="Element" type="Label" parent="WeaponDesc/VBoxContainer"]
+layout_mode = 2
+text = "Element: "
+
+[node name="Weight" type="Label" parent="WeaponDesc/VBoxContainer"]
+layout_mode = 2
+text = "Weight: "
+
+[node name="Components" type="Label" parent="WeaponDesc/VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+text = "Components: 
+
+
+
+"
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fn0d8")
+volume_db = -20.0
+
+[connection signal="sendWeaponUp" from="WeaponSelect" to="." method="_send_weapon_up"]

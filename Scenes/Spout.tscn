@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg3toeiavfsvr"]
+
+[ext_resource type="Texture2D" uid="uid://dyxlttodgr7eq" path="res://Assets/Crucible Assets/crucible spout.png" id="1_acgb0"]
+[ext_resource type="Script" path="res://Scripts/spout.gd" id="1_c55x5"]
+[ext_resource type="Texture2D" uid="uid://ccw86ajiinxn6" path="res://Assets/Crucible Assets/tex_molten_iron_a_256.png" id="2_74unj"]
+
+[node name="Spout" type="Node2D" node_paths=PackedStringArray("moltenTexture")]
+script = ExtResource("1_c55x5")
+moltenTexture = NodePath("Sprite2D/TextureRect")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_acgb0")
+
+[node name="TextureRect" type="TextureRect" parent="Sprite2D"]
+show_behind_parent = true
+offset_left = 25.0
+offset_top = 112.0
+offset_right = 83.0
+offset_bottom = 423.0
+texture = ExtResource("2_74unj")
+expand_mode = 1
+stretch_mode = 1

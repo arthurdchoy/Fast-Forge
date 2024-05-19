@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://cp7scq7wiwmtd"]
+
+[ext_resource type="Script" path="res://Scripts/CastScreenController.gd" id="1_0ujsw"]
+[ext_resource type="PackedScene" uid="uid://dw3y506n8dsox" path="res://Scenes/CoolingCast.tscn" id="1_vhqe1"]
+[ext_resource type="Texture2D" uid="uid://cpl6ejf0joene" path="res://Assets/Part Assets/blade part.png" id="2_8j2d3"]
+[ext_resource type="Texture2D" uid="uid://75brkbqojtik" path="res://Assets/Part Assets/handle part.png" id="3_twas4"]
+[ext_resource type="Texture2D" uid="uid://bcg5snfextwlv" path="res://Assets/Part Assets/crossguard part.png" id="4_lt6l1"]
+[ext_resource type="Texture2D" uid="uid://cfwm6fnvlswfw" path="res://Assets/Part Assets/plate part.png" id="5_d68b4"]
+[ext_resource type="Texture2D" uid="uid://dhmtfflx4icx6" path="res://Assets/Part Assets/brick part.png" id="6_7hd22"]
+[ext_resource type="AudioStream" uid="uid://dysn3bl25ofkn" path="res://Assets/SOunds and Music/analog-appliance-button-15-186961.mp3" id="8_we5jv"]
+
+[node name="CastScreen" type="Node2D" node_paths=PackedStringArray("clickSound")]
+script = ExtResource("1_0ujsw")
+partTextures = Array[Texture2D]([ExtResource("2_8j2d3"), ExtResource("3_twas4"), ExtResource("4_lt6l1"), ExtResource("5_d68b4"), ExtResource("6_7hd22")])
+clickSound = NodePath("ClickSound")
+
+[node name="Casts" type="Node2D" parent="."]
+
+[node name="CoolingCast" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(128, 250)
+
+[node name="CoolingCast2" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(256, 250)
+
+[node name="CoolingCast3" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(384, 250)
+
+[node name="CoolingCast4" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(512, 250)
+
+[node name="CoolingCast5" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(640, 250)
+
+[node name="CoolingCast6" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(768, 250)
+
+[node name="CoolingCast7" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(896, 250)
+
+[node name="CoolingCast8" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(128, 475)
+
+[node name="CoolingCast9" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(256, 475)
+
+[node name="CoolingCast10" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(384, 475)
+
+[node name="CoolingCast11" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(512, 475)
+
+[node name="CoolingCast12" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(640, 475)
+
+[node name="CoolingCast13" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(768, 475)
+
+[node name="CoolingCast14" parent="Casts" instance=ExtResource("1_vhqe1")]
+position = Vector2(896, 475)
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_we5jv")
+volume_db = -20.0

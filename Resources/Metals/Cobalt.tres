@@ -1,13 +1,14 @@
 [gd_resource type="Resource" script_class="Metal" load_steps=2 format=3 uid="uid://csjmr8w0uhxb8"]
 
-[ext_resource type="Script" path="res://Scripts/metal.gd" id="1_vakkb"]
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/metal.gd" id="1_vakkb"]
 
 [resource]
 script = ExtResource("1_vakkb")
-metalName = "Cobalt"
-metalIngotDensity = 8.9
-metalElement = 2
-metalInitMeltTimeInSeconds = 15
-metalColor = Color(0, 0.278431, 0.670588, 1)
+metalBaseMeltTimeInSeconds = 15
+name = "Cobalt"
+ingotDensity = 8.9
+element = 2
+coolingTime = 0
+color = Color(0, 0.278431, 0.670588, 1)
 differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

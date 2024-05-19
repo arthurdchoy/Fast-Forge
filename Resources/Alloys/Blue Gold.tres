@@ -1,17 +1,19 @@
 [gd_resource type="Resource" script_class="Alloy" load_steps=4 format=3 uid="uid://dkiuw238qe5nr"]
 
 [ext_resource type="Resource" uid="uid://hsjckw3r7f3x" path="res://Resources/Metals/Iron.tres" id="1_861vr"]
-[ext_resource type="Script" path="res://Scripts/alloy.gd" id="1_b7umr"]
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/alloy.gd" id="1_b7umr"]
 [ext_resource type="Resource" uid="uid://q4nil5ga8uys" path="res://Resources/Metals/Gold.tres" id="2_ekltu"]
 
 [resource]
 script = ExtResource("1_b7umr")
-alloyName = "Blue Gold"
-alloyElement = 2
 alloyComponent1 = ExtResource("1_861vr")
 alloyComponent1Amount = 1
 alloyComponent2 = ExtResource("2_ekltu")
 alloyComponent2Amount = 3
-alloyColor = Color(0.839216, 0.823529, 0.580392, 1)
+name = "Blue Gold"
+ingotDensity = 0.0
+element = 2
+coolingTime = 0
+color = Color(0.839216, 0.823529, 0.580392, 1)
 differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

@@ -1,4 +1,121 @@
-[gd_scene format=3 uid="uid://ci5k3vjad1d0a"]
+[gd_scene load_steps=18 format=3 uid="uid://ci5k3vjad1d0a"]
+
+[ext_resource type="Script" path="res://Scripts/controller.gd" id="1_22wkn"]
+[ext_resource type="PackedScene" uid="uid://ck7h6grrhppx3" path="res://Scenes/Screens/CounterScreen.tscn" id="2_lpqk7"]
+[ext_resource type="PackedScene" uid="uid://8d85qs042h5c" path="res://Scenes/Screens/CrucibleScreen.tscn" id="2_tn64o"]
+[ext_resource type="Texture2D" uid="uid://b1hyjc22kuqbu" path="res://Assets/background.png" id="2_x7h4v"]
+[ext_resource type="PackedScene" uid="uid://cp7scq7wiwmtd" path="res://Scenes/Screens/CastScreen.tscn" id="3_f1uds"]
+[ext_resource type="PackedScene" uid="uid://dcqv2clqq3fkj" path="res://Scenes/Screens/AssemblyScreen.tscn" id="4_wkvcf"]
+[ext_resource type="PackedScene" uid="uid://bvbbv8lqd0mm6" path="res://Scenes/Screens/WeaponRack.tscn" id="5_ueaey"]
+[ext_resource type="PackedScene" uid="uid://cgoxvn15slecp" path="res://Scenes/Screens/StartScreen.tscn" id="7_orkg5"]
+[ext_resource type="AudioStream" uid="uid://3jd0i31y8tcx" path="res://Assets/SOunds and Music/Hall of the Mountain King.mp3" id="8_rhiq4"]
+[ext_resource type="AudioStream" uid="uid://cy2chkwlorwqh" path="res://Assets/SOunds and Music/game-over-yeah!-made-with-Voicemod.mp3" id="9_bwrcw"]
+[ext_resource type="Texture2D" uid="uid://bmu5rc78w3pyk" path="res://Assets/gameoverscreen.png" id="10_drk4q"]
+[ext_resource type="PackedScene" uid="uid://kdb15mjq7h4v" path="res://Scenes/Guidebook.tscn" id="11_7yxib"]
+[ext_resource type="StyleBox" uid="uid://ciwd7dulc3877" path="res://Assets/Styles/PartSelect.tres" id="11_o7qjw"]
+[ext_resource type="Texture2D" uid="uid://b5h16lrdnoxfq" path="res://Assets/guidebook icon.png" id="12_r6kig"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7bc25"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yvcox"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6sqqa"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(1, 0)
+
+[node name="GameController" type="Node2D" parent="." node_paths=PackedStringArray("bgm", "gameOverMusic", "guidebook", "guidebookButton")]
+script = ExtResource("1_22wkn")
+bgm = NodePath("BGM")
+gameOverMusic = NodePath("GameOverMusic")
+guidebook = NodePath("Guidebook")
+guidebookButton = NodePath("Button")
+
+[node name="Background" type="Sprite2D" parent="GameController"]
+modulate = Color(0.494118, 0.494118, 0.494118, 1)
+position = Vector2(512, 300)
+texture = ExtResource("2_x7h4v")
+
+[node name="Screens" type="Node2D" parent="GameController"]
+
+[node name="StartScreen" parent="GameController/Screens" instance=ExtResource("7_orkg5")]
+
+[node name="CounterScreen" parent="GameController/Screens" instance=ExtResource("2_lpqk7")]
+
+[node name="CrucibleScreen" parent="GameController/Screens" instance=ExtResource("2_tn64o")]
+position = Vector2(1024, 0)
+
+[node name="CastScreen" parent="GameController/Screens" instance=ExtResource("3_f1uds")]
+position = Vector2(2048, 0)
+
+[node name="AssemblyScreen" parent="GameController/Screens" instance=ExtResource("4_wkvcf")]
+position = Vector2(3072, 0)
+
+[node name="WeaponRack" parent="GameController/Screens" instance=ExtResource("5_ueaey")]
+position = Vector2(4096, 0)
+
+[node name="RightButton" type="Button" parent="GameController"]
+offset_left = 874.0
+offset_top = 20.0
+offset_right = 1024.0
+offset_bottom = 60.0
+text = "Go Right"
+
+[node name="LeftButton" type="Button" parent="GameController"]
+offset_top = 20.0
+offset_right = 150.0
+offset_bottom = 60.0
+text = "Go Left"
+
+[node name="BGM" type="AudioStreamPlayer" parent="GameController"]
+stream = ExtResource("8_rhiq4")
+volume_db = -20.0
+
+[node name="GameOverMusic" type="AudioStreamPlayer" parent="GameController"]
+stream = ExtResource("9_bwrcw")
+volume_db = -20.0
+
+[node name="GameOverSprite" type="Sprite2D" parent="GameController"]
+visible = false
+position = Vector2(512, 300)
+texture = ExtResource("10_drk4q")
+
+[node name="Label" type="Label" parent="GameController/GameOverSprite"]
+offset_left = 247.0
+offset_top = 146.0
+offset_right = 349.0
+offset_bottom = 215.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "100"
+
+[node name="Guidebook" parent="GameController" instance=ExtResource("11_7yxib")]
+visible = false
+
+[node name="Button" type="Button" parent="GameController"]
+offset_left = 676.0
+offset_top = 7.0
+offset_right = 776.0
+offset_bottom = 107.0
+scale = Vector2(0.75, 0.75)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7bc25")
+theme_override_styles/hover = ExtResource("11_o7qjw")
+theme_override_styles/pressed = ExtResource("11_o7qjw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yvcox")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6sqqa")
+
+[node name="Sprite2D" type="Sprite2D" parent="GameController/Button"]
+position = Vector2(50, 50)
+texture = ExtResource("12_r6kig")
+
+[connection signal="startTheGame" from="GameController/Screens/StartScreen" to="GameController" method="start"]
+[connection signal="customerArrive" from="GameController/Screens/CounterScreen" to="GameController" method="_on_counter_screen_customer_arrive"]
+[connection signal="customerServeSuccess" from="GameController/Screens/CounterScreen" to="GameController" method="_on_counter_screen_customer_serve_success"]
+[connection signal="gameOver" from="GameController/Screens/CounterScreen" to="GameController" method="gameOver"]
+[connection signal="sendCastUp" from="GameController/Screens/CrucibleScreen" to="GameController" method="_send_cast_down"]
+[connection signal="sendPartUp" from="GameController/Screens/CastScreen" to="GameController" method="_send_part_down"]
+[connection signal="sendWeaponUp" from="GameController/Screens/AssemblyScreen" to="GameController" method="_send_weapon_down"]
+[connection signal="removeCustomer" from="GameController/Screens/WeaponRack" to="GameController" method="_on_weapon_rack_remove_customer"]
+[connection signal="pressed" from="GameController/RightButton" to="GameController" method="_on_right_button_pressed"]
+[connection signal="pressed" from="GameController/LeftButton" to="GameController" method="_on_left_button_pressed"]
+[connection signal="pressed" from="GameController/Button" to="GameController" method="openGuidebook"]

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://ccokwrrop00go"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon.gd" id="1_rdbx5"]
+[ext_resource type="Texture2D" uid="uid://dpt02bpr13q48" path="res://Assets/Weapon Assets/sword.png" id="2_0r47f"]
+
+[resource]
+script = ExtResource("1_rdbx5")
+baseWeaponName = "Sword"
+type = 12
+numBlades = 1
+numHandles = 1
+numCrossguards = 1
+numPlates = 0
+numBricks = 0
+texture = ExtResource("2_0r47f")

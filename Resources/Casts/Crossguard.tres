@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Cast" load_steps=3 format=3 uid="uid://bi0njsxpraf4b"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/cast.gd" id="1_xenbb"]
+[ext_resource type="Texture2D" uid="uid://dosjkev41iieh" path="res://Assets/Cast Assets/crossguard cast.png" id="2_utisx"]
+
+[resource]
+script = ExtResource("1_xenbb")
+castName = "Crossguard"
+coolingMultiplier = 0.8
+castType = 2
+sprite = ExtResource("2_utisx")

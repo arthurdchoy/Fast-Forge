@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://d2muww7fmsh7c"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/weapon.gd" id="1_m5o5g"]
+[ext_resource type="Texture2D" uid="uid://cu04754j5yfr1" path="res://Assets/Weapon Assets/frying pan.png" id="2_netns"]
+
+[resource]
+script = ExtResource("1_m5o5g")
+baseWeaponName = "FryingPan"
+type = 4
+numBlades = 0
+numHandles = 1
+numCrossguards = 0
+numPlates = 2
+numBricks = 0
+texture = ExtResource("2_netns")

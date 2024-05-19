@@ -1,17 +1,19 @@
 [gd_resource type="Resource" script_class="Alloy" load_steps=4 format=3 uid="uid://btsjx700t0pi2"]
 
-[ext_resource type="Script" path="res://Scripts/alloy.gd" id="1_dpeib"]
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/alloy.gd" id="1_dpeib"]
 [ext_resource type="Resource" uid="uid://f3p1r1dr0orj" path="res://Resources/Metals/Silver.tres" id="1_g64mu"]
 [ext_resource type="Resource" uid="uid://bgitmby4h505s" path="res://Resources/Metals/Copper.tres" id="2_6wrh3"]
 
 [resource]
 script = ExtResource("1_dpeib")
-alloyName = "Argentium"
-alloyElement = 2
 alloyComponent1 = ExtResource("1_g64mu")
 alloyComponent1Amount = 4
 alloyComponent2 = ExtResource("2_6wrh3")
 alloyComponent2Amount = 1
-alloyColor = Color(0.890196, 0.752941, 0.752941, 1)
+name = "Argentium"
+ingotDensity = 0.0
+element = 2
+coolingTime = 0
+color = Color(0.890196, 0.752941, 0.752941, 1)
 differentMoltenColor = false
 moltenColor = Color(0, 0, 0, 1)

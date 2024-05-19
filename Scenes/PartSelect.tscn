@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1uxrdnqwtgxr"]
+
+[ext_resource type="Texture2D" uid="uid://cfwm6fnvlswfw" path="res://Assets/Part Assets/plate part.png" id="1_5c55j"]
+[ext_resource type="Script" path="res://Scripts/part_select.gd" id="1_yaee3"]
+[ext_resource type="StyleBox" uid="uid://ciwd7dulc3877" path="res://Assets/Styles/PartSelect.tres" id="3_yihii"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bv2ji"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sc1ij"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6bv7m"]
+
+[node name="PartSelect" type="Control" node_paths=PackedStringArray("sprite", "button", "label")]
+custom_minimum_size = Vector2(80, 67)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -40.0
+offset_top = -27.0
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+script = ExtResource("1_yaee3")
+sprite = NodePath("Part")
+button = NodePath("Button")
+label = NodePath("Label")
+
+[node name="Part" type="Sprite2D" parent="."]
+position = Vector2(40, 18)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_5c55j")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 320.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bv2ji")
+theme_override_styles/hover = ExtResource("3_yihii")
+theme_override_styles/pressed = ExtResource("3_yihii")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sc1ij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6bv7m")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 35.0
+offset_right = 800.0
+offset_bottom = 312.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Adamantium Crossguard"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Metal" load_steps=2 format=3 uid="uid://cjsbmklmt4iny"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/metal.gd" id="1_j2yuo"]
+
+[resource]
+script = ExtResource("1_j2yuo")
+metalBaseMeltTimeInSeconds = 0
+name = "Nothing"
+materialType = 22
+ingotDensity = 0.0
+element = 3
+coolingTime = 0
+color = Color(0, 0, 0, 0)
+differentMoltenColor = false
+moltenColor = Color(0, 0, 0, 1)

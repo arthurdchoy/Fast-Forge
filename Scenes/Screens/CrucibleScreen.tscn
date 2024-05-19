@@ -1,0 +1,212 @@
+[gd_scene load_steps=36 format=3 uid="uid://8d85qs042h5c"]
+
+[ext_resource type="PackedScene" uid="uid://6n8nosctq5yg" path="res://Scenes/Crucible.tscn" id="1_00g3g"]
+[ext_resource type="Script" path="res://Scripts/CrucibleScreenController.gd" id="1_jqlic"]
+[ext_resource type="Resource" uid="uid://dsdxpdq36ca0r" path="res://Resources/Alloys/Bronze.tres" id="2_biq6n"]
+[ext_resource type="PackedScene" uid="uid://cshi66dojeqhk" path="res://Scenes/AlloyBasin.tscn" id="3_ommfb"]
+[ext_resource type="PackedScene" uid="uid://bg3toeiavfsvr" path="res://Scenes/Spout.tscn" id="3_rw25m"]
+[ext_resource type="Resource" uid="uid://dt4nl0kw5p7ou" path="res://Resources/Alloys/Brass.tres" id="3_wscan"]
+[ext_resource type="Resource" uid="uid://ce0vrpc5t6jon" path="res://Resources/Alloys/Hard Steel.tres" id="4_kvuu7"]
+[ext_resource type="PackedScene" uid="uid://cmbi3bjr28c8q" path="res://Scenes/MetalSelect.tscn" id="5_4rm50"]
+[ext_resource type="Resource" uid="uid://cikjrd2kej06d" path="res://Resources/Alloys/Sky Steel.tres" id="5_60l2x"]
+[ext_resource type="Resource" uid="uid://ccv64d7tfpxam" path="res://Resources/Alloys/Red Gold.tres" id="6_3eq3i"]
+[ext_resource type="Resource" uid="uid://bgitmby4h505s" path="res://Resources/Metals/Copper.tres" id="6_4nntt"]
+[ext_resource type="Resource" uid="uid://43ki5565xqgv" path="res://Resources/Metals/Tin.tres" id="7_12i5g"]
+[ext_resource type="Resource" uid="uid://gkmbokkyl574" path="res://Resources/Alloys/White Gold.tres" id="7_m44lp"]
+[ext_resource type="Resource" uid="uid://vs1iiwof2ghq" path="res://Resources/Metals/Zinc.tres" id="8_c6tdi"]
+[ext_resource type="Resource" uid="uid://dkiuw238qe5nr" path="res://Resources/Alloys/Blue Gold.tres" id="8_svchc"]
+[ext_resource type="Resource" uid="uid://b00mlrc6vgo0v" path="res://Resources/Alloys/Electrum.tres" id="9_3f6mw"]
+[ext_resource type="Resource" uid="uid://cwwl32qgv8df8" path="res://Resources/Metals/Nickel.tres" id="9_afrg8"]
+[ext_resource type="Resource" uid="uid://btsjx700t0pi2" path="res://Resources/Alloys/Argentium.tres" id="10_ghs3i"]
+[ext_resource type="Resource" uid="uid://hsjckw3r7f3x" path="res://Resources/Metals/Iron.tres" id="10_vs75t"]
+[ext_resource type="Resource" uid="uid://q4nil5ga8uys" path="res://Resources/Metals/Gold.tres" id="11_8x846"]
+[ext_resource type="Resource" uid="uid://d041f0wtrysd" path="res://Resources/Alloys/Mythril.tres" id="11_238kf"]
+[ext_resource type="Resource" uid="uid://f3p1r1dr0orj" path="res://Resources/Metals/Silver.tres" id="12_iydiq"]
+[ext_resource type="Resource" uid="uid://cmad5rdfkxtne" path="res://Resources/Alloys/Adamantium.tres" id="12_nk0bm"]
+[ext_resource type="Resource" uid="uid://dx8nv6wrhc70e" path="res://Resources/Alloys/Hallowite.tres" id="13_45rai"]
+[ext_resource type="Resource" uid="uid://dms4k360fhy0n" path="res://Resources/Metals/Titanium.tres" id="13_jlgcg"]
+[ext_resource type="Resource" uid="uid://csjmr8w0uhxb8" path="res://Resources/Metals/Cobalt.tres" id="14_1l6fc"]
+[ext_resource type="Resource" uid="uid://bn25ovtpt65lq" path="res://Resources/Metals/Platnium.tres" id="15_dyjxy"]
+[ext_resource type="PackedScene" uid="uid://kaygmt4g1j14" path="res://Scenes/CastSelect.tscn" id="28_c3wqr"]
+[ext_resource type="Resource" uid="uid://cyvap7l3yfrwr" path="res://Resources/Casts/Blade.tres" id="29_hr3q1"]
+[ext_resource type="Resource" uid="uid://dpkhf1r6moan6" path="res://Resources/Casts/Handle.tres" id="30_bq6vn"]
+[ext_resource type="Resource" uid="uid://bi0njsxpraf4b" path="res://Resources/Casts/Crossguard.tres" id="31_6s58x"]
+[ext_resource type="Resource" uid="uid://chijfxhrc36lc" path="res://Resources/Casts/Plate.tres" id="32_uo317"]
+[ext_resource type="Resource" uid="uid://2y0y7rreok05" path="res://Resources/Casts/Brick.tres" id="33_k6s45"]
+[ext_resource type="Resource" uid="uid://ih8tyltu7lg0" path="res://Resources/Casts/Delete.tres" id="34_stiqx"]
+[ext_resource type="AudioStream" uid="uid://dysn3bl25ofkn" path="res://Assets/SOunds and Music/analog-appliance-button-15-186961.mp3" id="35_lghw2"]
+
+[node name="CrucibleScreen" type="Node2D" node_paths=PackedStringArray("metalsButton", "castsButton", "crucibles", "alloyBasins", "clickSound")]
+script = ExtResource("1_jqlic")
+metalsButton = NodePath("MetalsButton")
+castsButton = NodePath("CastsButton")
+crucibles = [NodePath("Crucibles/Crucible1"), NodePath("Crucibles/Crucible2"), NodePath("Crucibles/Crucible3"), NodePath("Crucibles/Crucible4")]
+alloyBasins = [NodePath("AlloyBasins/AlloyBasin1"), NodePath("AlloyBasins/AlloyBasin2"), NodePath("AlloyBasins/AlloyBasin3")]
+alloyList = Array[Resource("res://Scripts/Resource Scripts/alloy.gd")]([ExtResource("12_nk0bm"), ExtResource("10_ghs3i"), ExtResource("8_svchc"), ExtResource("3_wscan"), ExtResource("2_biq6n"), ExtResource("9_3f6mw"), ExtResource("13_45rai"), ExtResource("4_kvuu7"), ExtResource("11_238kf"), ExtResource("6_3eq3i"), ExtResource("5_60l2x"), ExtResource("7_m44lp")])
+clickSound = NodePath("ClickSound")
+
+[node name="Crucibles" type="Node2D" parent="."]
+
+[node name="Crucible1" parent="Crucibles" instance=ExtResource("1_00g3g")]
+position = Vector2(128, 200)
+
+[node name="RightSpout" parent="Crucibles/Crucible1" instance=ExtResource("3_rw25m")]
+show_behind_parent = true
+position = Vector2(80, 50)
+
+[node name="Crucible2" parent="Crucibles" instance=ExtResource("1_00g3g")]
+position = Vector2(384, 200)
+
+[node name="LeftSpout" parent="Crucibles/Crucible2" instance=ExtResource("3_rw25m")]
+show_behind_parent = true
+position = Vector2(-80, 50)
+scale = Vector2(-1, 1)
+
+[node name="RightSpout" parent="Crucibles/Crucible2" instance=ExtResource("3_rw25m")]
+show_behind_parent = true
+position = Vector2(80, 50)
+
+[node name="Crucible3" parent="Crucibles" instance=ExtResource("1_00g3g")]
+position = Vector2(640, 200)
+
+[node name="LeftSpout" parent="Crucibles/Crucible3" instance=ExtResource("3_rw25m")]
+show_behind_parent = true
+position = Vector2(-80, 50)
+scale = Vector2(-1, 1)
+
+[node name="RightSpout" parent="Crucibles/Crucible3" instance=ExtResource("3_rw25m")]
+show_behind_parent = true
+position = Vector2(80, 50)
+
+[node name="Crucible4" parent="Crucibles" instance=ExtResource("1_00g3g")]
+position = Vector2(896, 200)
+
+[node name="LeftSpout" parent="Crucibles/Crucible4" instance=ExtResource("3_rw25m")]
+show_behind_parent = true
+position = Vector2(-80, 50)
+scale = Vector2(-1, 1)
+
+[node name="AlloyBasins" type="Node2D" parent="."]
+
+[node name="AlloyBasin1" parent="AlloyBasins" instance=ExtResource("3_ommfb")]
+position = Vector2(256, 400)
+
+[node name="AlloyBasin2" parent="AlloyBasins" instance=ExtResource("3_ommfb")]
+position = Vector2(512, 400)
+
+[node name="AlloyBasin3" parent="AlloyBasins" instance=ExtResource("3_ommfb")]
+position = Vector2(768, 400)
+
+[node name="Metals" type="Node2D" parent="."]
+
+[node name="Copper" parent="Metals" instance=ExtResource("5_4rm50")]
+position = Vector2(51.2, 525)
+metal = ExtResource("6_4nntt")
+
+[node name="Tin" parent="Metals" instance=ExtResource("5_4rm50")]
+position = Vector2(153.6, 525)
+metal = ExtResource("7_12i5g")
+
+[node name="Zinc" parent="Metals" instance=ExtResource("5_4rm50")]
+position = Vector2(256, 525)
+metal = ExtResource("8_c6tdi")
+
+[node name="Nickel" parent="Metals" instance=ExtResource("5_4rm50")]
+position = Vector2(358.4, 525)
+metal = ExtResource("9_afrg8")
+
+[node name="Iron" parent="Metals" instance=ExtResource("5_4rm50")]
+position = Vector2(460.8, 525)
+metal = ExtResource("10_vs75t")
+
+[node name="Gold" parent="Metals" instance=ExtResource("5_4rm50")]
+position = Vector2(563.2, 525)
+metal = ExtResource("11_8x846")
+
+[node name="Silver" parent="Metals" instance=ExtResource("5_4rm50")]
+position = Vector2(665.6, 525)
+metal = ExtResource("12_iydiq")
+
+[node name="Titanium" parent="Metals" instance=ExtResource("5_4rm50")]
+position = Vector2(768, 525)
+metal = ExtResource("13_jlgcg")
+
+[node name="Cobalt" parent="Metals" instance=ExtResource("5_4rm50")]
+position = Vector2(870.4, 525)
+metal = ExtResource("14_1l6fc")
+
+[node name="Platinium" parent="Metals" instance=ExtResource("5_4rm50")]
+position = Vector2(972.8, 525)
+metal = ExtResource("15_dyjxy")
+
+[node name="Casts" type="Node2D" parent="."]
+
+[node name="Blade" parent="Casts" instance=ExtResource("28_c3wqr")]
+position = Vector2(85, 725)
+cast = ExtResource("29_hr3q1")
+
+[node name="Handle" parent="Casts" instance=ExtResource("28_c3wqr")]
+position = Vector2(256, 725)
+cast = ExtResource("30_bq6vn")
+
+[node name="Crossguard" parent="Casts" instance=ExtResource("28_c3wqr")]
+position = Vector2(427, 725)
+cast = ExtResource("31_6s58x")
+
+[node name="Plate" parent="Casts" instance=ExtResource("28_c3wqr")]
+position = Vector2(598, 725)
+cast = ExtResource("32_uo317")
+
+[node name="Brick" parent="Casts" instance=ExtResource("28_c3wqr")]
+position = Vector2(769, 725)
+cast = ExtResource("33_k6s45")
+
+[node name="Remove" parent="Casts" instance=ExtResource("28_c3wqr")]
+position = Vector2(940, 725)
+cast = ExtResource("34_stiqx")
+
+[node name="MetalsButton" type="Button" parent="."]
+offset_left = 20.0
+offset_top = 440.0
+offset_right = 100.0
+offset_bottom = 480.0
+text = "Metals"
+
+[node name="CastsButton" type="Button" parent="."]
+offset_left = 924.0
+offset_top = 440.0
+offset_right = 1004.0
+offset_bottom = 480.0
+text = "Casts"
+
+[node name="Problem Text" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -50.0
+offset_right = 400.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(400, 50)
+
+[node name="Timer" type="Timer" parent="Problem Text"]
+wait_time = 3.0
+one_shot = true
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("35_lghw2")
+volume_db = -20.0
+
+[connection signal="crucibleClick" from="Crucibles/Crucible1" to="." method="_crucible_1_click"]
+[connection signal="crucibleClick" from="Crucibles/Crucible2" to="." method="_crucible_2_click"]
+[connection signal="crucibleClick" from="Crucibles/Crucible3" to="." method="_crucible_3_click"]
+[connection signal="crucibleClick" from="Crucibles/Crucible4" to="." method="_crucible_4_click"]
+[connection signal="basinClick" from="AlloyBasins/AlloyBasin1" to="." method="_basin_1_click"]
+[connection signal="basinClick" from="AlloyBasins/AlloyBasin2" to="." method="_basin_2_click"]
+[connection signal="basinClick" from="AlloyBasins/AlloyBasin3" to="." method="_basin_3_click"]
+[connection signal="pressed" from="MetalsButton" to="." method="_on_metals_button_pressed"]
+[connection signal="pressed" from="CastsButton" to="." method="_on_casts_button_pressed"]

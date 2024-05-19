@@ -1,0 +1,91 @@
+[gd_scene load_steps=11 format=3 uid="uid://6n8nosctq5yg"]
+
+[ext_resource type="Script" path="res://Scripts/crucible.gd" id="1_8cfnm"]
+[ext_resource type="Texture2D" uid="uid://ccw86ajiinxn6" path="res://Assets/Crucible Assets/tex_molten_iron_a_256.png" id="1_wcwr4"]
+[ext_resource type="Texture2D" uid="uid://crglbvhjlhhqj" path="res://Assets/Crucible Assets/crucible.png" id="2_2qywo"]
+[ext_resource type="Texture2D" uid="uid://cyesptp13u0bu" path="res://Assets/Crucible Assets/crucible select.png" id="4_y165q"]
+[ext_resource type="Texture2D" uid="uid://vqrcp8nivw68" path="res://Assets/Crucible Assets/arrow.png" id="5_f73od"]
+[ext_resource type="AudioStream" uid="uid://bp4j5ipkfwbng" path="res://Assets/SOunds and Music/bloop-1-184019.mp3" id="6_q0tqc"]
+[ext_resource type="AudioStream" uid="uid://vjxsfpjc65gs" path="res://Assets/SOunds and Music/bloop-2-186531.mp3" id="7_3pkw1"]
+[ext_resource type="AudioStream" uid="uid://dmn68bv4tsypw" path="res://Assets/SOunds and Music/fireplace-with-crackling-sounds-2-min-rk-178392.mp3" id="8_i38og"]
+[ext_resource type="AudioStream" uid="uid://c5fdajxguamfx" path="res://Assets/SOunds and Music/pour-water-glug-1-184056.mp3" id="9_so2l4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55tq3"]
+size = Vector2(192, 166)
+
+[node name="Crucible" type="Area2D" node_paths=PackedStringArray("moltenTexture", "selectLines", "arrowOfAvailability", "timer", "progressBar", "bloop1", "bloop2", "fireCrackle")]
+script = ExtResource("1_8cfnm")
+moltenTexture = NodePath("CrucibleSprite/MoltenMetalTexture")
+selectLines = NodePath("Select")
+arrowOfAvailability = NodePath("ArrowOfAvailability")
+timer = NodePath("Timer")
+progressBar = NodePath("ProgressBar")
+bloop1 = NodePath("Bloop1")
+bloop2 = NodePath("Bloop2")
+fireCrackle = NodePath("Fire")
+
+[node name="CrucibleSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_2qywo")
+
+[node name="CrucibleBackground" type="ColorRect" parent="CrucibleSprite"]
+show_behind_parent = true
+offset_left = -42.0
+offset_top = -60.0
+offset_right = 41.0
+offset_bottom = 167.0
+color = Color(0.14902, 0.14902, 0.14902, 1)
+
+[node name="MoltenMetalTexture" type="TextureRect" parent="CrucibleSprite"]
+show_behind_parent = true
+offset_left = -70.0
+offset_top = -60.0
+offset_right = 70.0
+offset_bottom = 172.0
+texture = ExtResource("1_wcwr4")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_55tq3")
+
+[node name="Select" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_y165q")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -96.0
+offset_top = -104.0
+offset_right = 96.0
+offset_bottom = -77.0
+max_value = 15.0
+step = -1.0
+
+[node name="ArrowOfAvailability" type="Sprite2D" parent="."]
+position = Vector2(0, -117)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_f73od")
+
+[node name="Bloop1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_q0tqc")
+volume_db = -20.0
+
+[node name="Bloop2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_3pkw1")
+volume_db = -20.0
+
+[node name="Fire" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_i38og")
+volume_db = -20.0
+
+[node name="Pour" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_so2l4")
+volume_db = -20.0
+
+[connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="." to="." method="_on_mouse_shape_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

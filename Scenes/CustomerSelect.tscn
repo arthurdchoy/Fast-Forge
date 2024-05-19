@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://bx43ejhynfg3j"]
+
+[ext_resource type="Texture2D" uid="uid://hbanlkkc0hv2" path="res://Assets/Customers/red.png" id="1_b3qxi"]
+[ext_resource type="Script" path="res://Scripts/CustomerSelect.gd" id="1_j65gl"]
+[ext_resource type="StyleBox" uid="uid://ciwd7dulc3877" path="res://Assets/Styles/PartSelect.tres" id="3_h1bbs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yd4m8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f27f8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gtqi7"]
+
+[node name="CustomerSelect" type="TextureRect"]
+offset_right = 200.0
+offset_bottom = 200.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_b3qxi")
+script = ExtResource("1_j65gl")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yd4m8")
+theme_override_styles/hover = ExtResource("3_h1bbs")
+theme_override_styles/pressed = ExtResource("3_h1bbs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_f27f8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gtqi7")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

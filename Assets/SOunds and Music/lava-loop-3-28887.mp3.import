@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dp262m0mm15e6"
+path="res://.godot/imported/lava-loop-3-28887.mp3-7a5d7a4ae4e4a306e6b2509674d426cb.mp3str"
+
+[deps]
+
+source_file="res://Assets/SOunds and Music/lava-loop-3-28887.mp3"
+dest_files=["res://.godot/imported/lava-loop-3-28887.mp3-7a5d7a4ae4e4a306e6b2509674d426cb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

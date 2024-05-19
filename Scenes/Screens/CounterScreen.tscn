@@ -1,0 +1,34 @@
+[gd_scene load_steps=15 format=3 uid="uid://ck7h6grrhppx3"]
+
+[ext_resource type="Script" path="res://Scripts/CounterScreen.gd" id="1_pv5hf"]
+[ext_resource type="Resource" uid="uid://lj4875qgtdmk" path="res://Resources/Weapons/Axe.tres" id="2_6bfeb"]
+[ext_resource type="Resource" uid="uid://bxguhydiq5oec" path="res://Resources/Weapons/Cube.tres" id="3_ay7w8"]
+[ext_resource type="Resource" uid="uid://cq32lc5duglda" path="res://Resources/Weapons/Dagger.tres" id="4_hyv13"]
+[ext_resource type="Resource" uid="uid://pjdwtv8r6onn" path="res://Resources/Weapons/Fists.tres" id="5_jwggf"]
+[ext_resource type="Resource" uid="uid://d2muww7fmsh7c" path="res://Resources/Weapons/FryingPan.tres" id="6_2l6r3"]
+[ext_resource type="Resource" uid="uid://7hfpcr3nlom8" path="res://Resources/Weapons/Greatsword.tres" id="7_7mdnl"]
+[ext_resource type="Resource" uid="uid://c4n7dlennllqa" path="res://Resources/Weapons/Hammer.tres" id="8_7gncs"]
+[ext_resource type="Resource" uid="uid://bsjdxoh5fpewf" path="res://Resources/Weapons/Rapier.tres" id="9_llont"]
+[ext_resource type="Resource" uid="uid://r5l0bgjqev6m" path="res://Resources/Weapons/Scythe.tres" id="10_sj8g4"]
+[ext_resource type="Resource" uid="uid://bfk0x85jdyuml" path="res://Resources/Weapons/Spade.tres" id="11_x6ltw"]
+[ext_resource type="Resource" uid="uid://db7c7isvex50v" path="res://Resources/Weapons/Spear.tres" id="12_v788l"]
+[ext_resource type="Resource" uid="uid://qkal13e8wg61" path="res://Resources/Weapons/Staff.tres" id="13_3up11"]
+[ext_resource type="Resource" uid="uid://ccokwrrop00go" path="res://Resources/Weapons/Sword.tres" id="14_levpn"]
+
+[node name="CounterScreen" type="Node2D" node_paths=PackedStringArray("newCustomerTimer", "youreTooFastTimer")]
+script = ExtResource("1_pv5hf")
+newCustomerTimer = NodePath("NewCustomerTimer")
+youreTooFastTimer = NodePath("TempTimer")
+possibleWeapons = Array[Resource("res://Scripts/Resource Scripts/weapon.gd")]([ExtResource("2_6bfeb"), ExtResource("3_ay7w8"), ExtResource("4_hyv13"), ExtResource("5_jwggf"), ExtResource("6_2l6r3"), ExtResource("7_7mdnl"), ExtResource("8_7gncs"), ExtResource("9_llont"), ExtResource("10_sj8g4"), ExtResource("11_x6ltw"), ExtResource("12_v788l"), ExtResource("13_3up11"), ExtResource("14_levpn")])
+
+[node name="Customers" type="Node2D" parent="."]
+
+[node name="NewCustomerTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="TempTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="NewCustomerTimer" to="." method="_on_new_customer_timer_timeout"]
+[connection signal="timeout" from="TempTimer" to="." method="_on_temp_timer_timeout"]

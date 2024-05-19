@@ -1,11 +1,14 @@
 [gd_resource type="Resource" script_class="Metal" load_steps=2 format=3 uid="uid://cwwl32qgv8df8"]
 
-[ext_resource type="Script" path="res://Scripts/metal.gd" id="1_8rjhr"]
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/metal.gd" id="1_8rjhr"]
 
 [resource]
 script = ExtResource("1_8rjhr")
-metalName = "Nickel"
-metalIngotDensity = 8.9
-metalElement = 1
-metalInitMeltTimeInSeconds = 15
-metalColor = Color(0.447059, 0.454902, 0.447059, 1)
+metalBaseMeltTimeInSeconds = 15
+name = "Nickel"
+ingotDensity = 8.9
+element = 1
+coolingTime = 0
+color = Color(0.447059, 0.454902, 0.447059, 1)
+differentMoltenColor = false
+moltenColor = Color(0, 0, 0, 1)
