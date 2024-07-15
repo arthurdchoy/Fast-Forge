@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://6n8nosctq5yg"]
+[gd_scene load_steps=15 format=3 uid="uid://6n8nosctq5yg"]
 
 [ext_resource type="Script" path="res://Scripts/crucible.gd" id="1_8cfnm"]
 [ext_resource type="Texture2D" uid="uid://ccw86ajiinxn6" path="res://Assets/Crucible Assets/tex_molten_iron_a_256.png" id="1_wcwr4"]
@@ -9,9 +9,16 @@
 [ext_resource type="AudioStream" uid="uid://vjxsfpjc65gs" path="res://Assets/SOunds and Music/bloop-2-186531.mp3" id="7_3pkw1"]
 [ext_resource type="AudioStream" uid="uid://dmn68bv4tsypw" path="res://Assets/SOunds and Music/fireplace-with-crackling-sounds-2-min-rk-178392.mp3" id="8_i38og"]
 [ext_resource type="AudioStream" uid="uid://c5fdajxguamfx" path="res://Assets/SOunds and Music/pour-water-glug-1-184056.mp3" id="9_so2l4"]
+[ext_resource type="StyleBox" uid="uid://ciwd7dulc3877" path="res://Assets/Styles/PartSelect.tres" id="10_v8dof"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_55tq3"]
 size = Vector2(192, 166)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_12uqt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2i048"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_geu5w"]
 
 [node name="Crucible" type="Area2D" node_paths=PackedStringArray("moltenTexture", "selectLines", "arrowOfAvailability", "timer", "progressBar", "bloop1", "bloop2", "fireCrackle")]
 script = ExtResource("1_8cfnm")
@@ -85,6 +92,17 @@ volume_db = -20.0
 [node name="Pour" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_so2l4")
 volume_db = -20.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = -96.0
+offset_top = -77.0
+offset_right = 96.0
+offset_bottom = 89.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_12uqt")
+theme_override_styles/hover = ExtResource("10_v8dof")
+theme_override_styles/pressed = ExtResource("10_v8dof")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2i048")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_geu5w")
 
 [connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]
 [connection signal="mouse_shape_exited" from="." to="." method="_on_mouse_shape_exited"]
